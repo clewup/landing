@@ -7,6 +7,5 @@
 }
 
 body {
-  @apply bg-bg;
-  @apply text-white;
+  @apply text-white
 }
