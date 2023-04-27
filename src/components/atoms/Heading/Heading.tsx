@@ -5,6 +5,10 @@ interface HeadingProps {
 }
 
 const Heading: FC<HeadingProps> = ({ children }) => {
-  return <h1 className="text-8xl font-bold text-purple-400">{children}</h1>;
+  return (
+    <h1 className="text-6xl font-bold text-black tracking-tighter">
+      {children}
+    </h1>
+  );
 };
 export default Heading;
