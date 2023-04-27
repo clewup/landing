@@ -1,16 +1,10 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 
 interface HeadingProps {
-    title: string;
-    subtitle: string;
+  children: string;
 }
 
-const Heading: FC<HeadingProps> = ({title, subtitle}) => {
-    return (
-        <div>
-            <h1 className="text-4xl font-bold text-lime-400">{title}</h1>
-            <p className={"text-4xl -translate-y-3"}>{subtitle}</p>
-        </div>
-    )
-}
+const Heading: FC<HeadingProps> = ({ children }) => {
+  return <h1 className="text-8xl font-bold text-purple-400">{children}</h1>;
+};
 export default Heading;
