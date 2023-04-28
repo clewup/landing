@@ -1,6 +1,8 @@
+"use client";
+
 import Heading from "@/components/atoms/Heading/Heading";
 import ProjectTile from "@/components/atoms/ProjectTile/ProjectTile";
-import Image from "next/image";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
@@ -12,10 +14,9 @@ export default function Home() {
       <Heading>I&apos;M CLEWUP, SOFTWARE DEVELOPER.</Heading>
 
       <div className="grid grid-cols-4 gap-5">
-        <ProjectTile />
-        <ProjectTile />
-        <ProjectTile />
-        <ProjectTile />
+        {projects.map((project) => {
+          return <ProjectTile key={project.id} project={project} />;
+        })}
       </div>
     </main>
   );
