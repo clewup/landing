@@ -1,3 +1,9 @@
+import PageWrapper from "@/components/atoms/PageWrapper/PageWrapper";
+
 export default function Projects() {
-  return <main></main>;
+  return (
+    <PageWrapper>
+      <div></div>
+    </PageWrapper>
+  );
 }

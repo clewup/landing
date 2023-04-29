@@ -1,3 +1,4 @@
+import PageWrapper from "@/components/atoms/PageWrapper/PageWrapper";
 import ProjectTile from "@/components/atoms/ProjectTile/ProjectTile";
 import { Project } from "@/types/project";
 import { use } from "react";
@@ -14,7 +15,7 @@ export default function Home() {
   const repos = use(getRepositories());
 
   return (
-    <main className="flex flex-col gap-10 h-screen px-10">
+    <PageWrapper className="flex flex-col gap-10 px-10">
       <div className="text-9xl pt-20 semi">
         <h1 className="font-bold">I&apos;M CLEWUP,</h1>
         <h1>SOFTWARE DEVELOPER.</h1>
@@ -37,6 +38,6 @@ export default function Home() {
         <p>.NET</p>
         <p>POSTGRES</p>
       </div>
-    </main>
+    </PageWrapper>
   );
 }
