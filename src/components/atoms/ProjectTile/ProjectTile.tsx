@@ -18,8 +18,9 @@ const ProjectTile: FC<ProjectTileProps> = ({ project }) => {
         className="h-96 border-black border-2 text-black flex items-center justify-center rounded"
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
-        initial={{ scale: 1 }}
-        whileHover={{ scale: 1.05 }}
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}
+        exit={{ opacity: 0, x: 20 }}
       >
         {isHovering && (
           <m.p
