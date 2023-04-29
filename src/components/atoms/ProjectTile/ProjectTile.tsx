@@ -1,5 +1,6 @@
+"use client";
+
 import { Project } from "@/types/project";
-import Image from "next/image";
 import { FC, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -12,7 +13,7 @@ const ProjectTile: FC<ProjectTileProps> = ({ project }) => {
 
   return (
     <motion.div
-      className="w-72 h-72 border-black border-2 text-black flex items-center justify-center"
+      className="h-96 border-black border-2 text-black flex items-center justify-center rounded"
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
       initial={{ scale: 1 }}

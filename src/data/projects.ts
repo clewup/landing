@@ -13,4 +13,16 @@ export const projects: Project[] = [
     description: "",
     demo: "https://www.blog.clewup.co.uk",
   },
+  {
+    id: 3,
+    name: "store",
+    description: "",
+    demo: "https://www.store.clewup.co.uk",
+  },
+  {
+    id: 4,
+    name: "survey",
+    description: "",
+    demo: "https://www.survey.clewup.co.uk",
+  },
 ];

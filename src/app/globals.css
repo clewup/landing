@@ -9,3 +9,8 @@
 body {
   @apply text-white
 }
+
+::selection {
+  background-color: black;
+  color: rgb(216 180 254 / 1);
+}

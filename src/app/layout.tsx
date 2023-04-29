@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="bg-purple-300 w-screen overflow-x-hidden">
+        <div className="bg-purple-300 max-w-screen overflow-x-hidden text-black scroll-smooth">
           <Header />
           <span className="min-h-screen">{children}</span>
         </div>
