@@ -1,7 +1,18 @@
 import ProjectTile from "@/components/atoms/ProjectTile/ProjectTile";
-import { projects } from "@/data/projects";
+import { Project } from "@/types/project";
+import { use } from "react";
+
+const getRepositories = async (): Promise<Project[]> => {
+  const res = await fetch(
+    `https://gh-pinned-repos.egoist.dev/?username=${process.env.GITHUB_USERNAME}`,
+    { cache: "no-store" }
+  );
+  return await res.json();
+};
 
 export default function Home() {
+  const repos = use(getRepositories());
+
   return (
     <main className="flex flex-col gap-10 h-screen px-10">
       <div className="text-9xl pt-20 semi">
@@ -12,8 +23,8 @@ export default function Home() {
       <div>
         <h2 className="text-xl">PROJECTS</h2>
         <div className="grid grid-cols-4 gap-5">
-          {projects.map((project) => {
-            return <ProjectTile key={project.id} project={project} />;
+          {repos.map((project) => {
+            return <ProjectTile key={project.repo} project={project} />;
           })}
         </div>
       </div>
