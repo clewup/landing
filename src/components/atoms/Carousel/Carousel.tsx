@@ -1,17 +1,24 @@
 "use client";
 
-import projects from "@/data/projects";
-import { useRouter } from "next/navigation";
 import { FC, useEffect, useRef, useState } from "react";
 import cx from "classnames";
 import { motion as m } from "framer-motion";
 
-const ProjectShowcase: FC = () => {
-  const router = useRouter();
+interface CarouselItem {
+  label: string;
+  image?: string;
+  onClick?: () => void;
+}
+
+interface CarouselProps {
+  items: CarouselItem[];
+}
+
+const Carousel: FC<CarouselProps> = ({ items }) => {
   const wrapperRef = useRef<HTMLUListElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const [activeProject, setActiveProject] = useState(5);
+  const [activeItem, setActiveItem] = useState(5);
 
   useEffect(() => {
     if (!wrapperRef) return;
@@ -33,7 +40,7 @@ const ProjectShowcase: FC = () => {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, [activeProject]);
+  }, [activeItem]);
 
   return (
     <m.div
@@ -47,10 +54,10 @@ const ProjectShowcase: FC = () => {
           ref={wrapperRef}
           className="flex gap-3 md:gap-2 md:h-96 group flex-col md:flex-row"
         >
-          {projects.map((project, index) => {
+          {items.map((item, index) => {
             return (
               <li
-                aria-current={activeProject === index}
+                aria-current={activeItem === index}
                 key={index}
                 className={cx(
                   "relative md:w-[8%] md:[&[aria-current='true']]:w-[30%] md:first:w-[1%] md:last:w-[1%]",
@@ -59,36 +66,39 @@ const ProjectShowcase: FC = () => {
                   "md:hover:w-[12%] md:[&:not(:hover), &:not(:first), &:not(:last)]:group-hover:w-[7%]"
                 )}
                 onClick={() => {
-                  if (activeProject === index) {
-                    router.push(project.url);
+                  if (activeItem === index) {
+                    item.onClick?.();
                   }
-                  setActiveProject(index);
+                  setActiveItem(index);
                 }}
               >
                 <div className="relative overflow-hidden w-full h-full rounded-2xl bg-black">
-                  <img
-                    className="absolute right-0 h-auto md:w-[590px] md:h-[640px] md:left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 grayscale object-cover max-w-none"
-                    src={project.image}
-                    alt={project.name}
-                    width="590px"
-                    height="640px"
-                  />
+                  {item.image && (
+                    <img
+                      className="absolute right-0 h-auto md:w-[590px] md:h-[640px] md:left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 grayscale object-cover max-w-none"
+                      src={item.image}
+                      alt={item.label}
+                      width="590px"
+                      height="640px"
+                    />
+                  )}
+
                   <div
                     className={cx(
                       "inset-0 opacity-25 duration-300 before:absolute before:bottom-0 before:left-[-546px] before:right-0 before-top-[-148px] before:z-10",
-                      activeProject === index ? "md:opacity-25" : "md:opacity-0"
+                      activeItem === index ? "md:opacity-25" : "md:opacity-0"
                     )}
                   />
                   <div
                     className={cx(
                       "md:absolute left-8 top-8 w-[590px] transition-opacity duration-700",
-                      activeProject === index
+                      activeItem === index
                         ? "md:translate-x-0 md:opacity-100"
                         : "md:translate-x-3 md:opacity-0"
                     )}
                   >
                     <p className="relative p-4 md:p-0 text-4xl uppercase font-bold text-white z-10">
-                      {project.name}
+                      {item.label}
                     </p>
                   </div>
                 </div>
@@ -101,4 +111,4 @@ const ProjectShowcase: FC = () => {
   );
 };
 
-export default ProjectShowcase;
+export default Carousel;
