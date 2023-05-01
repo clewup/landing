@@ -53,7 +53,7 @@ const ProjectShowcase: FC = () => {
                 aria-current={activeProject === index}
                 key={index}
                 className={cx(
-                  "relative md:w-[8%] md:[&[aria-current='true']]:w-[25%] md:first:w-[1%] md:last:w-[1%]",
+                  "relative md:w-[8%] md:[&[aria-current='true']]:w-[30%] md:first:w-[1%] md:last:w-[1%]",
                   "md:[transition:width_var(--transition,200ms_ease-in)]",
                   "before:hidden md:before:block before:absolute before:bg-red-300 before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] before:bg-transparent",
                   "md:hover:w-[12%] md:[&:not(:hover), &:not(:first), &:not(:last)]:group-hover:w-[7%]"
