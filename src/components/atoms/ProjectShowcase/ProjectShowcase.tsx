@@ -11,7 +11,7 @@ const ProjectShowcase: FC = () => {
   const wrapperRef = useRef<HTMLUListElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const [activeProject, setActiveProject] = useState(0);
+  const [activeProject, setActiveProject] = useState(5);
 
   useEffect(() => {
     if (!wrapperRef) return;
@@ -53,7 +53,7 @@ const ProjectShowcase: FC = () => {
                 aria-current={activeProject === index}
                 key={index}
                 className={cx(
-                  "relative md:w-[8%] md:[&[aria-current='true']]:w-[30%] md:first:w-[1%] md:last:w-[1%]",
+                  "relative md:w-[8%] md:[&[aria-current='true']]:w-[25%] md:first:w-[1%] md:last:w-[1%]",
                   "md:[transition:width_var(--transition,200ms_ease-in)]",
                   "before:hidden md:before:block before:absolute before:bg-red-300 before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] before:bg-transparent",
                   "md:hover:w-[12%] md:[&:not(:hover), &:not(:first), &:not(:last)]:group-hover:w-[7%]"
@@ -65,9 +65,9 @@ const ProjectShowcase: FC = () => {
                   setActiveProject(index);
                 }}
               >
-                <div className="relative overflow-hidden w-full h-full rounded bg-black">
+                <div className="relative overflow-hidden w-full h-full rounded-2xl bg-black">
                   <img
-                    className="absolute right-0 w-24 h-auto md:w-[590px] md:h-[640px] md:left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 grayscale w-full h-full object-cover max-w-none"
+                    className="absolute right-0 h-auto md:w-[590px] md:h-[640px] md:left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 grayscale object-cover max-w-none"
                     src={project.image}
                     alt={project.name}
                     width="590px"
@@ -81,15 +81,15 @@ const ProjectShowcase: FC = () => {
                   />
                   <div
                     className={cx(
-                      "md:absolute left-8 top-8 w-[590px] transition-[transform,opacity]",
+                      "md:absolute left-8 top-8 w-[590px] transition-opacity duration-700",
                       activeProject === index
                         ? "md:translate-x-0 md:opacity-100"
                         : "md:translate-x-3 md:opacity-0"
                     )}
                   >
-                    <span className="bg-black p-4 md:p-0 md:px-2 md:py-1 text-4xl uppercase font-bold text-white">
+                    <p className="relative p-4 md:p-0 text-4xl uppercase font-bold text-white z-10">
                       {project.name}
-                    </span>
+                    </p>
                   </div>
                 </div>
               </li>

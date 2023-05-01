@@ -26,9 +26,9 @@ const Header = () => {
   ];
 
   return (
-    <div className="w-screen text-3xl items-center flex justify-center gap-10 font-bold py-5 z-50">
-      <Link href={"/"} className="absolute left-10">
-        <Logo className={"w-16"} />
+    <div className="relative h-20 text-lg gap-5 w-screen md:text-3xl items-center flex md:justify-center md:gap-10 font-bold py-5 z-50">
+      <Link href={"/"} className="md:absolute left-10">
+        <Logo className="w-16" />
       </Link>
       <>
         {routes.map((route) => {
