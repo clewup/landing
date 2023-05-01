@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="backdrop-filter backdrop-blur-md fixed w-screen text-3xl items-center flex justify-center gap-10 font-bold py-5 z-50">
+    <div className="w-screen text-3xl items-center flex justify-center gap-10 font-bold py-5 z-50">
       <Link href={"/"} className="absolute left-10">
         <Logo className={"w-16"} />
       </Link>
