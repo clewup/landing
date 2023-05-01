@@ -1,19 +1,17 @@
 "use client";
 
-import { Project } from "@/types/project";
-import { wrap } from "framer-motion";
+import projects from "@/data/projects";
+import { useRouter } from "next/navigation";
 import { FC, useEffect, useRef, useState } from "react";
 import cx from "classnames";
+import { motion as m } from "framer-motion";
 
-interface ProjectShowcaseProps {
-  projects: Project[];
-}
-
-const ProjectShowcase: FC<ProjectShowcaseProps> = ({ projects }) => {
-  const [activeProject, setActiveProject] = useState(0);
-
+const ProjectShowcase: FC = () => {
+  const router = useRouter();
   const wrapperRef = useRef<HTMLUListElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const [activeProject, setActiveProject] = useState(0);
 
   useEffect(() => {
     if (!wrapperRef) return;
@@ -38,7 +36,11 @@ const ProjectShowcase: FC<ProjectShowcaseProps> = ({ projects }) => {
   }, [activeProject]);
 
   return (
-    <div>
+    <m.div
+      initial={{ x: 75, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.5 }}
+    >
       <h2 className="text-xl">PROJECTS</h2>
       <div className="w-screen max-w-full">
         <ul
@@ -54,16 +56,20 @@ const ProjectShowcase: FC<ProjectShowcaseProps> = ({ projects }) => {
                   "relative md:w-[8%] md:[&[aria-current='true']]:w-[30%] md:first:w-[1%] md:last:w-[1%]",
                   "md:[transition:width_var(--transition,200ms_ease-in)]",
                   "before:hidden md:before:block before:absolute before:bg-red-300 before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] before:bg-transparent",
-                  "md:hover:w-[12%] md:[&:not(:hover), &:not(:first), &:not(:last)]:group-hover:w-[7%]",
-                  "md:first:pointer-events-none md:last:pointer-events-none md:[&_img]:first:opacity-0 md:[&_img]:last:opacity-0"
+                  "md:hover:w-[12%] md:[&:not(:hover), &:not(:first), &:not(:last)]:group-hover:w-[7%]"
                 )}
-                onClick={() => setActiveProject(index)}
+                onClick={() => {
+                  if (activeProject === index) {
+                    router.push(project.url);
+                  }
+                  setActiveProject(index);
+                }}
               >
                 <div className="relative overflow-hidden w-full h-full rounded bg-black">
                   <img
                     className="absolute right-0 w-24 h-auto md:w-[590px] md:h-[640px] md:left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 grayscale w-full h-full object-cover max-w-none"
                     src={project.image}
-                    alt={project.repo}
+                    alt={project.name}
                     width="590px"
                     height="640px"
                   />
@@ -81,9 +87,9 @@ const ProjectShowcase: FC<ProjectShowcaseProps> = ({ projects }) => {
                         : "md:translate-x-3 md:opacity-0"
                     )}
                   >
-                    <p className="p-4 md:p-0 text-4xl uppercase font-bold">
-                      {project.repo}
-                    </p>
+                    <span className="bg-black p-4 md:p-0 md:px-2 md:py-1 text-4xl uppercase font-bold text-white">
+                      {project.name}
+                    </span>
                   </div>
                 </div>
               </li>
@@ -91,7 +97,7 @@ const ProjectShowcase: FC<ProjectShowcaseProps> = ({ projects }) => {
           })}
         </ul>
       </div>
-    </div>
+    </m.div>
   );
 };
 
