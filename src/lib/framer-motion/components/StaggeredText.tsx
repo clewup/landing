@@ -33,7 +33,7 @@ const StaggeredText: FC<StaggeredTextProps> = ({
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.3,
       },
     },
   };

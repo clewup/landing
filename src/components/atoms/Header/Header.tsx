@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="relative h-20 text-lg gap-5 w-screen md:text-3xl items-center flex md:justify-center md:gap-10 font-bold py-5 z-50">
+    <div className="relative h-[10vh] text-lg gap-5 w-screen md:text-3xl items-center flex md:justify-center md:gap-10 font-bold py-5 z-50">
       <Link href={"/"} className="md:absolute left-10">
         <Logo className="w-16 h-16" />
       </Link>

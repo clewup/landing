@@ -72,7 +72,7 @@ const Carousel: FC<CarouselProps> = ({ items }) => {
                   setActiveItem(index);
                 }}
               >
-                <div className="relative overflow-hidden w-full h-full rounded-2xl bg-black">
+                <div className="relative overflow-hidden w-full h-full rounded bg-black">
                   {item.image && (
                     <img
                       className="absolute right-0 h-auto md:w-[590px] md:h-[640px] md:left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 grayscale object-cover max-w-none"
