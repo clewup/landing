@@ -14,3 +14,8 @@ body {
   background-color: black;
   color: rgb(216 180 254 / 1);
 }
+
+.stroke-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+}

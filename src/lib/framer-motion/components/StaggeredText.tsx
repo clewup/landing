@@ -5,13 +5,13 @@ import { AnimatePresence, motion as m } from "framer-motion";
 import cx from "classnames";
 
 interface StaggeredTextProps {
-  text: string;
+  children: string;
   className?: string;
   delay?: number;
 }
 
 const StaggeredText: FC<StaggeredTextProps> = ({
-  text,
+  children,
   className,
   delay = 0,
 }) => {
@@ -27,7 +27,7 @@ const StaggeredText: FC<StaggeredTextProps> = ({
     }
   }, []);
 
-  const wordsArray = text.split(" ");
+  const wordsArray = children.split(" ");
 
   const containerVariants = {
     hidden: {},
