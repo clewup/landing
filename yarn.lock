@@ -114,6 +114,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@kamona/tailwindcss-perspective@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@kamona/tailwindcss-perspective/-/tailwindcss-perspective-0.1.1.tgz#60f823a914439c7dcf46484119e803bcd62f2bb4"
+  integrity sha512-ayC/wnfR1EYBIc3ShDKp8oYfZTPPo1aRcEuMVI+BcoUz28bsxtEpiakS0Gc6vvXi9LjKuJillJYShMl+qGldEw==
+
 "@next/env@13.3.0":
   version "13.3.0"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.3.0.tgz#cc2e49f03060a4684ce7ec7fd617a21bc5b9edba"

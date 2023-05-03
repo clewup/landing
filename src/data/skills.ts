@@ -22,7 +22,7 @@ const skills: Skill[] = [
     title: "Cloud Computing",
     icon: CloudIcon,
     description:
-      "I work with cloud providers such as Azure and Vercel to create applications that stay online 24/7.",
+      "I work with cloud providers such as Azure and Vercel to deploy applications that stay online 24/7.",
   },
 ];
 
