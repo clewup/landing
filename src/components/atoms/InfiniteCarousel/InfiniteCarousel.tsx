@@ -38,7 +38,7 @@ const InfiniteCarousel: FC<InfiniteCarouselProps> = ({ items }) => {
     }
   };
 
-  const itemVariants = {};
+
 
   return (
     <motion.div
