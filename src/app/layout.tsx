@@ -1,4 +1,5 @@
 import "./globals.css";
+import Footer from "@/components/atoms/Footer/Footer";
 import Header from "@/components/atoms/Header/Header";
 
 export const metadata = {
@@ -14,9 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="bg-purple-300 max-w-screen overflow-x-hidden text-black scroll-smooth">
+        <div className="bg-branding-dark max-w-screen overflow-x-hidden text-white">
           <Header />
           <span className="min-h-screen">{children}</span>
+          <Footer />
         </div>
       </body>
     </html>

@@ -6,12 +6,16 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        "screen-header": "90vh",
+        "screen-header": "80vh",
       },
       fontFamily: {
         sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
       },
-      colors: {},
+      colors: {
+        branding: {
+          dark: "#111111",
+        },
+      },
     },
   },
   plugins: [require("@kamona/tailwindcss-perspective")],

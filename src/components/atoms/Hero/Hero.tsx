@@ -1,30 +1,25 @@
 "use client";
 
-import StaggeredText from "@/lib/framer-motion/components/StaggeredText";
-import { useScroll, useTransform, motion as m } from "framer-motion";
-import { useRef } from "react";
+import { motion as m } from "framer-motion";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "end start"],
-  });
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+  const router = useRouter();
 
   return (
-    <m.div
-      ref={ref}
-      style={{ opacity, scale }}
-      className="text-4xl md:text-9xl semi h-screen-header flex flex-col justify-center px-10"
-    >
-      <div className="h-60">
-        <StaggeredText className="font-bold stroke-text">
-          I&apos;M CLEWUP,
-        </StaggeredText>
-        <StaggeredText delay={0.8}>SOFTWARE DEVELOPER.</StaggeredText>
+    <m.div className="flex items-center px-20 h-screen-header">
+      <div className="w-1/2 flex flex-col gap-5">
+        <h1 className=" text-2xl font-semibold">LEWIS J</h1>
+        <h2 className="text-8xl">Designer & Developer.</h2>
+
+        <span
+          className="flex gap-5 items-center pt-10 cursor-pointer"
+          onClick={() => router.push("#projects")}
+        >
+          <ArrowDownCircleIcon className="h-12" />
+          <p className="text-4xl">Projects</p>
+        </span>
       </div>
     </m.div>
   );

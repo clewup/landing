@@ -12,21 +12,21 @@ const Header = () => {
 
   const routes = [
     {
-      label: "HOME",
+      label: "Projects",
       href: "/",
     },
     {
-      label: "PROJECTS",
-      href: "/projects",
+      label: "About",
+      href: "/about",
     },
     {
-      label: "ABOUT",
-      href: "/about",
+      label: "Contact",
+      href: "/contact",
     },
   ];
 
   return (
-    <div className="relative h-[10vh] text-lg gap-5 w-screen md:text-3xl items-center flex md:justify-center md:gap-10 font-bold py-5 z-50">
+    <div className="relative h-[10vh] text-lg gap-5 w-screen md:text-3xl items-center flex md:justify-end px-12 md:gap-10 py-5 z-50">
       <Link href={"/"} className="md:absolute left-10">
         <Logo className="w-16 h-16" />
       </Link>
@@ -38,7 +38,7 @@ const Header = () => {
               {pathname === route.href && (
                 <m.span
                   layoutId="underline"
-                  className="absolute left-0 top-full block h-1 w-full bg-black"
+                  className="absolute left-0 top-full block h-1 w-full bg-white"
                 />
               )}
             </Link>

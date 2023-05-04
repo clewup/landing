@@ -10,9 +10,14 @@ body {
   @apply text-white
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 ::selection {
-  background-color: black;
-  color: rgb(216 180 254 / 1);
+  background-color: #FFFFFF;
+  color: #111111;
 }
 
 .stroke-text {
