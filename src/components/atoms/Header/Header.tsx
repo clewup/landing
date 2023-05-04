@@ -1,10 +1,10 @@
 "use client";
 
 import Logo from "@/components/atoms/Logo/Logo";
+import ThemeToggle from "@/components/atoms/ThemeToggle/ThemeToggle";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import Image from "next/image";
 import { motion as m } from "framer-motion";
 
 const Header = () => {
@@ -38,12 +38,15 @@ const Header = () => {
               {pathname === route.href && (
                 <m.span
                   layoutId="underline"
-                  className="absolute left-0 top-full block h-1 w-full bg-white"
+                  className="absolute left-0 top-full block h-1 w-full bg-branding-purple"
                 />
               )}
             </Link>
           );
         })}
+        <div>
+          <ThemeToggle />
+        </div>
       </>
     </div>
   );

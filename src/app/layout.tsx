@@ -1,6 +1,7 @@
 import "./globals.css";
 import Footer from "@/components/atoms/Footer/Footer";
 import Header from "@/components/atoms/Header/Header";
+import ThemeProvider from "@/contexts/Theme/ThemeContext";
 
 export const metadata = {
   title: "CLEWUP - Design & Development",
@@ -15,11 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="bg-branding-dark max-w-screen overflow-x-hidden text-white">
-          <Header />
-          <span className="min-h-screen">{children}</span>
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <div className="max-w-screen overflow-x-hidden">
+            <Header />
+            <span className="min-h-screen">{children}</span>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

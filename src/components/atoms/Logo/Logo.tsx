@@ -1,6 +1,7 @@
 "use client";
 
 import { motion as m } from "framer-motion";
+import { useTheme } from "next-themes";
 import { FC } from "react";
 
 interface LogoProps {
@@ -8,6 +9,10 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({ className }) => {
+  const { theme } = useTheme();
+
+  const color = theme === "dark" ? "#FFFF" : "#000";
+
   return (
     <m.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +23,7 @@ const Logo: FC<LogoProps> = ({ className }) => {
       <m.g
         xmlns="http://www.w3.org/2000/svg"
         transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
-        fill="#FFFFFF"
+        fill={color}
         stroke="none"
       >
         <m.path

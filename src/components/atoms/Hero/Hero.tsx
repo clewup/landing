@@ -14,7 +14,7 @@ const Hero = () => {
         <h2 className="text-8xl">Designer & Developer.</h2>
 
         <span
-          className="flex gap-5 items-center pt-10 cursor-pointer"
+          className="flex gap-5 items-center pt-10 cursor-pointer text-branding-purple"
           onClick={() => router.push("#projects")}
         >
           <ArrowDownCircleIcon className="h-12" />

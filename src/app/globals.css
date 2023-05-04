@@ -6,8 +6,10 @@
   @apply min-h-full;
 }
 
-body {
-  @apply text-white
+@layer base{
+  body {
+    @apply dark:bg-branding-black bg-white
+  }
 }
 
 html {
