@@ -77,6 +77,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@icons-pack/react-simple-icons@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-7.2.0.tgz#1c49623b7256a02d35b95385e07341be3306372e"
+  integrity sha512-XmyAiE+cDWDoCQGboie4se79ph2xAj/lQV+YVmLlX0nAFf92lci2ciVxWSN28f4MWZojskRWsu9S9BoH8UCQgg==
+
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
@@ -2169,6 +2174,11 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
+
+simple-icons@^8.12.1:
+  version "8.12.1"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-8.12.1.tgz#1ef356bda5d203f56fc7ce71f4dbdf52aee953b8"
+  integrity sha512-4h1rh9dFixdXMSZivOeVqx1gRExALHcZcSU4BtTeATVK3GFNrk44ySXj34yLa57a0pWwhWOiaZUzgVZiltLNqw==
 
 slash@^3.0.0:
   version "3.0.0"
