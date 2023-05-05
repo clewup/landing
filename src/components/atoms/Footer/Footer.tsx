@@ -1,12 +1,10 @@
 "use client";
 
 import meta from "@/data/meta";
-import {} from "@heroicons/react/24/outline";
 import {
   SiTwitter as TwitterIcon,
   SiGithub as GitHubIcon,
 } from "@icons-pack/react-simple-icons";
-import { useRouter } from "next/navigation";
 
 const Footer = () => {
   return (
