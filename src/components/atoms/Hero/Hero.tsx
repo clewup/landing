@@ -33,7 +33,7 @@ const Hero = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.2 }}
       >
-        <Image src="/ide.png" alt="ide" fill={true} />
+        <Image src="/hero.png" alt="hero" fill={true} />
       </m.div>
     </m.div>
   );
