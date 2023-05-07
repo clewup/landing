@@ -8,6 +8,10 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-  return <NextThemeProvider attribute="class">{children}</NextThemeProvider>;
+  return (
+    <NextThemeProvider attribute="class" defaultTheme={"dark"}>
+      {children}
+    </NextThemeProvider>
+  );
 };
 export default ThemeProvider;

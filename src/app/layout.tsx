@@ -1,6 +1,6 @@
 import "./globals.css";
 import Footer from "@/components/atoms/Footer/Footer";
-import Header from "@/components/organisms/Header/Header";
+import Header from "@/components/atoms/Header/Header";
 import ThemeProvider from "@/contexts/Theme/ThemeContext";
 
 export const metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <div className="max-w-screen overflow-x-hidden">
+          <div className="w-screen overflow-x-hidden">
             <Header />
             <span className="min-h-screen">{children}</span>
             <Footer />

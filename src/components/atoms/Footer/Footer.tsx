@@ -8,16 +8,24 @@ import {
 
 const Footer = () => {
   return (
-    <div className="h-20 flex items-center justify-center relative">
-      <span className="absolute left-10 flex gap-5">
+    <div className="h-20 flex items-center justify-between px-10 mt-20">
+      <span className="flex gap-5">
+        <p className="text-lg">Privacy Policy</p>
+      </span>
+      <span className="flex gap-5 items-center">
+        <a
+          href="mailto:lewis@clewup.co.uk"
+          className="text-lg text-branding-purple"
+        >
+          {meta.email}
+        </a>
         <a target="_blank" href={meta.socials.twitter}>
-          <TwitterIcon className="cursor-pointer" />
+          <TwitterIcon className="cursor-pointer" height={20} />
         </a>
         <a target="_blank" href={meta.socials.github}>
-          <GitHubIcon className="cursor-pointer" />
+          <GitHubIcon className="cursor-pointer" height={20} />
         </a>
       </span>
-      <p className="text-xl">© {new Date().getFullYear()} CLEWUP.</p>
     </div>
   );
 };

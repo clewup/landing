@@ -1,7 +1,8 @@
 "use client";
 
 import Logo from "@/components/atoms/Logo/Logo";
-import ThemeToggle from "@/components/atoms/ThemeToggle/ThemeToggle";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -9,6 +10,7 @@ import { motion as m } from "framer-motion";
 
 const Header = () => {
   const pathname = usePathname();
+  const { theme, setTheme } = useTheme();
 
   const routes = [
     {
@@ -26,9 +28,9 @@ const Header = () => {
   ];
 
   return (
-    <div className="relative h-[10vh] text-lg gap-5 w-screen md:text-3xl items-center flex md:justify-end px-12 md:gap-10 py-5 z-50">
+    <div className="relative h-[10vh] text-lg gap-5 w-screen md:text-2xl items-center flex md:justify-end px-12 md:gap-10 py-5 z-50">
       <Link href={"/"} className="md:absolute left-10">
-        <Logo className="w-16 h-16" />
+        <Logo className="w-12 h-12" />
       </Link>
       <>
         {routes.map((route) => {
@@ -44,8 +46,28 @@ const Header = () => {
             </Link>
           );
         })}
-        <div>
-          <ThemeToggle />
+        <div
+          onClick={() =>
+            theme === "dark" ? setTheme("light") : setTheme("dark")
+          }
+        >
+          {theme !== "light" ? (
+            <m.div
+              variants={{ hidden: { rotate: -20 }, visible: { rotate: 20 } }}
+              initial="hidden"
+              animate="visible"
+            >
+              <MoonIcon className="w-8" />
+            </m.div>
+          ) : (
+            <m.div
+              variants={{ hidden: { rotate: 20 }, visible: { rotate: -20 } }}
+              initial="hidden"
+              animate="visible"
+            >
+              <SunIcon className="w-8" />
+            </m.div>
+          )}
         </div>
       </>
     </div>
