@@ -30,7 +30,13 @@ const Header = () => {
   return (
     <div className="relative h-[10vh] text-lg gap-5 w-screen md:text-2xl items-center flex md:justify-end px-12 md:gap-10 py-5 z-50">
       <Link href={"/"} className="md:absolute left-10">
-        <Logo className="w-12 h-12" />
+        <div className="flex items-center text-3xl font-bold">
+          <h1>CLEW</h1>
+          <span className="flex items-center -ml-1">
+            <Logo className="w-10 h-10" />
+            <h1 className="-ml-1">P</h1>
+          </span>
+        </div>
       </Link>
       <>
         {routes.map((route) => {
