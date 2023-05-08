@@ -10,20 +10,6 @@ interface PageWrapperProps {
 }
 
 const PageWrapper: FC<PageWrapperProps> = ({ children, className }) => {
-  return (
-    <m.main
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      initial="hidden"
-      animate="visible"
-      exit="hidden"
-      transition={{ duration: 0.5 }}
-      className={cx("min-h-screen", className)}
-    >
-      {children}
-    </m.main>
-  );
+  return <m.main className={cx("min-h-screen", className)}>{children}</m.main>;
 };
 export default PageWrapper;
