@@ -1,6 +1,5 @@
 import "./globals.css";
 import Footer from "@/components/atoms/Footer/Footer";
-import Header from "@/components/atoms/Header/Header";
 import ThemeProvider from "@/contexts/Theme/ThemeContext";
 
 export const metadata = {
@@ -18,7 +17,6 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <div className="w-screen overflow-x-hidden">
-            <Header />
             <span className="min-h-screen">{children}</span>
             <Footer />
           </div>

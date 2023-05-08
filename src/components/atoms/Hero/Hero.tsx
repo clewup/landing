@@ -1,14 +1,11 @@
 "use client";
 
-import RubberText from "@/lib/framer-motion/components/RubberText";
+import Logo from "@/components/atoms/Logo/Logo";
 import RevealText from "@/lib/framer-motion/components/RevealText";
 import { AnimatePresence, motion as m } from "framer-motion";
-import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 
 const Hero = () => {
-  const router = useRouter();
-
   const textVariants = {
     hidden: { y: 500 },
     visible: {
@@ -24,7 +21,7 @@ const Hero = () => {
   return (
     <AnimatePresence>
       <m.div
-        className="flex flex-col justify-end h-screen-header overflow-hidden p-5"
+        className="flex flex-col justify-end h-screen overflow-hidden p-5"
         variants={{
           hidden: {},
           visible: {
