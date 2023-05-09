@@ -1,40 +1,27 @@
 "use client";
 
-import { motion as m } from "framer-motion";
+import { motion as m, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const Quote = () => {
-  const textVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-      },
-    },
-  };
+  const { scrollYProgress } = useScroll();
+
+  const opacityOne = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
+  const opacityTwo = useTransform(scrollYProgress, [0.3, 0.5], [0, 1]);
+  const opacityThree = useTransform(scrollYProgress, [0.5, 0.7], [0, 1]);
 
   return (
-    <m.div
-      variants={{
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.5 } },
-      }}
-      initial="hidden"
-      whileInView="visible"
-      className="h-[50vh] p-5 flex gap-5 justify-center items-center"
-    >
-      <m.h1 variants={textVariants} className="text-7xl font-bold">
+    <m.div className="h-[50vh] p-5 flex gap-5 justify-center items-center">
+      <m.h1 style={{ opacity: opacityOne }} className="text-7xl font-bold">
         THINK,
       </m.h1>
       <m.h1
-        variants={textVariants}
+        style={{ opacity: opacityTwo }}
         className="text-7xl font-bold text-branding-purple"
       >
         CREATE,
       </m.h1>
-      <m.h1 variants={textVariants} className="text-7xl font-bold">
+      <m.h1 style={{ opacity: opacityThree }} className="text-7xl font-bold">
         DELIVER.
       </m.h1>
     </m.div>
