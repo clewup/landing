@@ -14,7 +14,7 @@ const FeaturedProject: FC<FeaturedProjectProps> = ({
   project: { name, description, category, image, website },
 }) => {
   const { scrollYProgress } = useScroll();
-  const imageY = useParallax(scrollYProgress, 50);
+  const imageY = useParallax(scrollYProgress, 75);
 
   return (
     <div className="h-[50vh] w-screen p-5 flex justify-center items-center relative ">

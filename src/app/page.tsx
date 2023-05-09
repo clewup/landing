@@ -1,3 +1,4 @@
+import About from "@/components/atoms/About/About";
 import FeaturedProject from "@/components/atoms/FeaturedProject/FeaturedProject";
 import Hero from "@/components/atoms/Hero/Hero";
 import PageWrapper from "@/components/atoms/PageWrapper/PageWrapper";
@@ -10,8 +11,8 @@ export default function Home() {
     <PageWrapper className="flex flex-col">
       <Hero />
       <Quote />
-
       <FeaturedProject project={projects[0]} />
+      <About />
     </PageWrapper>
   );
 }
