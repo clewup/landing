@@ -3,8 +3,8 @@ const About = () => {
     <div className="w-screen h-[50vh] flex justify-center items-center gap-10">
       <div className="w-1/3">
         <p className=" text-2xl">
-          Working at the intersection of creativity and user experience, I am to
-          provide memorable experiences with functionality that supports
+          Working at the intersection of creativity and user experience, I aim
+          to provide memorable experiences with functionality that supports
           business growth.
         </p>
       </div>
