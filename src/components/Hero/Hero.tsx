@@ -1,6 +1,5 @@
 "use client";
 
-import Logo from "@/components/Logo/Logo";
 import RevealText from "@/lib/framer-motion/components/RevealText";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { useRouter } from "next/navigation";
