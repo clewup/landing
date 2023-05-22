@@ -3,7 +3,8 @@ import { Project } from "@/types/project";
 const projects: Project[] = [
   {
     name: "lockr",
-    description: "",
+    description:
+      "A centralised, passwordless authentication application designed to seamlessly integrate with my other applications.",
     category: "web application",
     image:
       "https://res.cloudinary.com/dliog6kq6/image/upload/v1684791118/lockr_ki00sy.jpg",
@@ -11,10 +12,11 @@ const projects: Project[] = [
   },
   {
     name: "blog",
-    description: "",
+    description:
+      "An intuitive, user-friendly content management system that empowers individuals to create and engage with blog posts.",
     category: "web application",
     image:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+      "https://res.cloudinary.com/dliog6kq6/image/upload/v1684791832/Screenshot_2023-05-22_at_22.43.05_fecdbo.png",
     website: "https://www.blog.clewup.co.uk",
   },
 ];

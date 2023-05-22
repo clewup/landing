@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/components/atoms/Logo/Logo";
+import Logo from "@/components/Logo/Logo";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useTheme } from "next-themes";
 import Link from "next/link";

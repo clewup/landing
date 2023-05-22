@@ -1,18 +1,15 @@
-import About from "@/components/atoms/About/About";
-import FeaturedProject from "@/components/atoms/FeaturedProject/FeaturedProject";
-import Hero from "@/components/atoms/Hero/Hero";
-import PageWrapper from "@/components/atoms/PageWrapper/PageWrapper";
-import Quote from "@/components/atoms/Quote/Quote";
-import projects from "@/data/projects";
+import About from "@/components/About/About";
+import Hero from "@/components/Hero/Hero";
+import PageWrapper from "@/components/PageWrapper/PageWrapper";
+import Projects from "@/components/Projects/Projects";
 import React from "react";
 
 export default function Home() {
   return (
-    <PageWrapper className="flex flex-col">
+    <PageWrapper className="flex flex-col p-5">
       <Hero />
-      <Quote />
-      <FeaturedProject project={projects[0]} />
       <About />
+      <Projects />
     </PageWrapper>
   );
 }

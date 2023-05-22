@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/components/atoms/Logo/Logo";
+import Logo from "@/components/Logo/Logo";
 import RevealText from "@/lib/framer-motion/components/RevealText";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <AnimatePresence>
       <m.div
-        className="flex flex-col justify-end h-screen overflow-hidden p-5"
+        className="flex flex-col justify-end h-screen overflow-hidden pb-5"
         variants={{
           hidden: {},
           visible: {
