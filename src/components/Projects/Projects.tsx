@@ -11,27 +11,8 @@ const Projects = () => {
 
   return (
     <div>
-      <div className="w-screen h-screen flex relative items-center px-32">
-        <div className="w-1/2 flex flex-col gap-10">
-          <h1 className="text-7xl font-bold uppercase">FEATURED</h1>
-          <span>
-            <h2 className="text-5xl font-bold uppercase">
-              {featuredProject.name}
-            </h2>
-            <p className="text-2xl">{featuredProject.description}</p>
-          </span>
-
-          <Link href={featuredProject.website} target={"_blank"}>
-            <p className="underline font-bold uppercase text-3xl">
-              Take a Peek!
-            </p>
-          </Link>
-        </div>
-        <img
-          src={featuredProject.image}
-          alt={featuredProject.name}
-          className="absolute w-2/5 right-32 rounded-2xl"
-        />
+      <div className="h-screen flex items-center">
+        <FeaturedProjectCard project={featuredProject} />
       </div>
 
       <div className="flex flex-col h-screen items-center justify-center">
@@ -41,6 +22,31 @@ const Projects = () => {
             <ProjectCard key={index} project={project} />
           ))}
         </div>
+      </div>
+    </div>
+  );
+};
+
+interface FeaturedProjectCardProps {
+  project: Project;
+}
+
+const FeaturedProjectCard: FC<FeaturedProjectCardProps> = ({ project }) => {
+  return (
+    <div className="w-screen flex gap-10 px-32">
+      <div className="w-1/2 flex flex-col gap-10">
+        <h1 className="text-7xl font-bold uppercase">FEATURED</h1>
+        <span>
+          <h2 className="text-5xl font-bold uppercase">{project.name}</h2>
+          <p className="text-2xl">{project.description}</p>
+        </span>
+
+        <Link href={project.website} target={"_blank"}>
+          <p className="underline font-bold uppercase text-3xl">Take a Peek!</p>
+        </Link>
+      </div>
+      <div className="w-1/2">
+        <img src={project.image} alt={project.name} className="rounded-2xl" />
       </div>
     </div>
   );
