@@ -18,15 +18,11 @@ const FeaturedProject: FC<FeaturedProjectProps> = ({
 
   return (
     <div className="h-[50vh] w-screen p-5 flex justify-center items-center relative ">
-      <div className="w-full h-full bg-branding-purple">
-        <h1 className="text-black text-7xl p-10 font-bold uppercase">
-          FEATURED
-        </h1>
-        <h2 className="text-black text-5xl font-bold uppercase px-10">
-          {name}
-        </h2>
+      <div className="w-full h-full">
+        <h1 className="text-7xl p-10 font-bold uppercase">FEATURED</h1>
+        <h2 className="text-5xl font-bold uppercase px-10">{name}</h2>
         <Link href={website} target={"_blank"}>
-          <p className="text-black underline font-bold uppercase text-5xl px-10">
+          <p className="underline font-bold uppercase text-5xl px-10">
             Take a Peek!
           </p>
         </Link>

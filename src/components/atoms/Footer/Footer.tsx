@@ -13,10 +13,7 @@ const Footer = () => {
         <p className="text-lg">Privacy Policy</p>
       </span>
       <span className="flex gap-5 items-center">
-        <a
-          href="mailto:lewis@clewup.co.uk"
-          className="text-lg text-branding-purple"
-        >
+        <a href="mailto:lewis@clewup.co.uk" className="text-lg">
           {meta.email}
         </a>
         <a target="_blank" href={meta.socials.twitter}>

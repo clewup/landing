@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         branding: {
           black: "#111111",
-          purple: "#D8B4FE",
+          purple: "#9A4FD0",
         },
       },
     },
