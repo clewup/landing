@@ -1,4 +1,4 @@
-const meta = {
+const metadata = {
   email: "hello@clewup.co.uk",
   socials: {
     github: "https://www.github.com/clewup",
@@ -6,4 +6,4 @@ const meta = {
   },
 };
 
-export default meta;
+export default metadata;

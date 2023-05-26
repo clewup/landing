@@ -16,7 +16,7 @@ const projects: Project[] = [
       "An intuitive, user-friendly content management system that empowers individuals to create and engage with blog posts.",
     category: "web application",
     image:
-      "https://res.cloudinary.com/dliog6kq6/image/upload/v1684791832/Screenshot_2023-05-22_at_22.43.05_fecdbo.png",
+      "https://res.cloudinary.com/dliog6kq6/image/upload/v1685144207/Screenshot_2023-05-27_at_00.36.31_hv4x1g.png",
     website: "https://www.blog.clewup.co.uk",
   },
 ];

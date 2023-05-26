@@ -1,6 +1,6 @@
 "use client";
 
-import meta from "@/data/meta";
+import metadata from "@/data/metadata";
 import {
   SiTwitter as TwitterIcon,
   SiGithub as GitHubIcon,
@@ -14,12 +14,12 @@ const Footer = () => {
       </span>
       <span className="flex gap-5 items-center">
         <a href="mailto:lewis@clewup.co.uk" className="text-lg">
-          {meta.email}
+          {metadata.email}
         </a>
-        <a target="_blank" href={meta.socials.twitter}>
+        <a target="_blank" href={metadata.socials.twitter}>
           <TwitterIcon className="cursor-pointer" height={20} />
         </a>
-        <a target="_blank" href={meta.socials.github}>
+        <a target="_blank" href={metadata.socials.github}>
           <GitHubIcon className="cursor-pointer" height={20} />
         </a>
       </span>
