@@ -4,10 +4,10 @@ const projects: Project[] = [
   {
     name: "lockr",
     description:
-      "A centralised, passwordless authentication application designed to seamlessly integrate with my other applications.",
+      "A centralised, passwordless authentication application designed to seamlessly integrate with my other applications and prevent repeated registration.",
     category: "web application",
     image:
-      "https://res.cloudinary.com/dliog6kq6/image/upload/v1684791118/lockr_ki00sy.jpg",
+      "https://res.cloudinary.com/dliog6kq6/image/upload/v1686607599/Screenshot_2023-06-12_at_18.05.23_nrfrqg.png",
     website: "https://www.lockr.clewup.co.uk",
   },
   {
@@ -16,8 +16,17 @@ const projects: Project[] = [
       "An intuitive, user-friendly content management system that empowers individuals to create and engage with blog posts.",
     category: "web application",
     image:
-      "https://res.cloudinary.com/dliog6kq6/image/upload/v1685144207/Screenshot_2023-05-27_at_00.36.31_hv4x1g.png",
+      "https://res.cloudinary.com/dliog6kq6/image/upload/v1686607600/Screenshot_2023-06-12_at_18.06.02_np7oni.png",
     website: "https://www.blog.clewup.co.uk",
+  },
+  {
+    name: "store",
+    description:
+      "A dynamic ecommerce website with seamless cart and checkout functionalities, providing a convenient and secure online shopping experience.",
+    category: "web application",
+    image:
+      "https://res.cloudinary.com/dliog6kq6/image/upload/v1686607600/Screenshot_2023-06-12_at_18.05.05_qkruqv.png",
+    website: "https://www.store.clewup.co.uk",
   },
 ];
 
