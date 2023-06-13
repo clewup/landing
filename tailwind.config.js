@@ -15,10 +15,26 @@ module.exports = {
       colors: {
         branding: {
           black: "#111111",
-          purple: "#9A4FD0",
         },
       },
     },
   },
-  plugins: [require("@kamona/tailwindcss-perspective")],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        landing: {
+          primary: "#fca311",
+          secondary: "#FF1654",
+          accent: "#1FB2A5",
+          neutral: "#CCCCCC",
+          "base-100": "#111111",
+          info: "#3ABFF8",
+          success: "#198754",
+          warning: "#FBBD23",
+          error: "#d9534f",
+        },
+      },
+    ],
+  },
 };

@@ -35,8 +35,9 @@ const Hero = () => {
         <m.span variants={textVariants}>
           <h1 className="text-5xl font-semibold">LEWIS J</h1>
         </m.span>
-        <m.span variants={textVariants}>
-          <h2 className="text-9xl font-semibold">DESIGNER &</h2>
+        <m.span variants={textVariants} className="flex">
+          <h2 className="text-9xl font-semibold stroke-text">DESIGNER </h2>
+          <h2 className="text-9xl font-semibold">&nbsp;&</h2>
         </m.span>
         <m.span variants={textVariants}>
           <RevealText className="text-9xl font-semibold">DEVELOPER</RevealText>

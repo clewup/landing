@@ -1,6 +1,6 @@
-import { Project } from "@/types/project";
+import { ProjectType } from "@/types/projectTypes";
 
-const projects: Project[] = [
+const projects: ProjectType[] = [
   {
     name: "lockr",
     description:

@@ -6,20 +6,9 @@
   @apply min-h-full;
 }
 
-@layer base{
-  body {
-    @apply dark:bg-branding-black bg-white
-  }
-}
-
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
-}
-
-::selection {
-  background-color: #FFFFFF;
-  color: #111111;
 }
 
 .stroke-text {

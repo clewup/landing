@@ -25,7 +25,7 @@ const About = () => {
         </m.h1>
         <m.h1
           style={{ opacity: opacityTwo }}
-          className="text-7xl font-bold text-branding-purple"
+          className="text-7xl font-bold text-primary"
         >
           CREATE,
         </m.h1>
@@ -43,7 +43,7 @@ const About = () => {
         </div>
         <div className="w-1/3 flex flex-col items-end gap-20">
           <span>
-            <h2 className="text-4xl font-bold">SERVICES</h2>
+            <h2 className="text-4xl font-bold text-primary">SERVICES</h2>
             <span className="text-2xl">
               <p>UI/UX Development</p>
               <p>API Development</p>

@@ -21,7 +21,7 @@ const RevealText: FC<RevealTextProps> = ({ children: text, className }) => {
         transition={{ duration: 0.4, ease: "easeInOut", delay: 0.2 }}
         initial="hidden"
         whileInView="visible"
-        className="absolute top-0 bottom-0 left-0 right-0 bg-branding-purple z-20"
+        className="absolute top-0 bottom-0 left-0 right-0 bg-primary z-20"
       />
     </div>
   );
