@@ -6,8 +6,10 @@ import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import Project from "@/components/Project/Project";
 import SectionWrapper from "@/components/SectionWrapper/SectionWrapper";
 import ThinkCreateDeliver from "@/components/ThinkCreateDeliver/ThinkCreateDeliver";
+import metadata from "@/data/metadata";
 import projects from "@/data/projects";
 import React from "react";
+import { Mail as EmailIcon } from "react-feather";
 
 export default function Home() {
   const featuredProject = projects[0];
@@ -52,9 +54,28 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="flex flex-col items-center justify-center gap-5">
+      <SectionWrapper className="flex flex-col justify-center gap-5">
         <Heading text="EDUCATION & EMPLOYMENT" subtext="HISTORY" />
-        <History />
+
+        <div className="flex justify-center">
+          <History />
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper className="flex flex-col justify-center gap-5">
+        <Heading text="REACH OUT" subtext="CONTACT" />
+        <div className="flex gap-10 justify-center">
+          <div>
+            <span className="flex gap-5 items-center">
+              <span className="bg-primary text-base-100 rounded-[50%] p-2">
+                <EmailIcon />
+              </span>
+              <a href={`mailto:${metadata.email}`} className="text-2xl">
+                {metadata.email}
+              </a>
+            </span>
+          </div>
+        </div>
       </SectionWrapper>
     </PageWrapper>
   );
