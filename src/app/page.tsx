@@ -1,6 +1,7 @@
 import FeaturedProject from "@/components/FeaturedProject/FeaturedProject";
 import Heading from "@/components/Heading/Heading";
 import Hero from "@/components/Hero/Hero";
+import History from "@/components/History/History";
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import Project from "@/components/Project/Project";
 import SectionWrapper from "@/components/SectionWrapper/SectionWrapper";
@@ -49,6 +50,11 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </SectionWrapper>
+
+      <SectionWrapper className="flex flex-col items-center justify-center gap-5">
+        <Heading text="EDUCATION & EMPLOYMENT" subtext="HISTORY" />
+        <History />
       </SectionWrapper>
     </PageWrapper>
   );
