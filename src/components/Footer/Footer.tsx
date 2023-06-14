@@ -5,7 +5,7 @@ import {
   SiTwitter as TwitterIcon,
   SiGithub as GitHubIcon,
 } from "@icons-pack/react-simple-icons";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Clock from "react-live-clock";
 
 const Footer = () => {

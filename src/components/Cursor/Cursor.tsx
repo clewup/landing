@@ -5,7 +5,7 @@ import { motion as m } from "framer-motion";
 import React from "react";
 
 const Cursor = () => {
-  const { variant, text, mousePos } = useCursor();
+  const { variant, content, mousePos } = useCursor();
 
   const cursorVariants = {
     default: {
@@ -29,7 +29,7 @@ const Cursor = () => {
       animate={variant}
       className="landing-cursor bg-white h-[32px] w-[32px] rounded-[50%] fixed top-0 left-0 pointer-events-none z-50 flex justify-center items-center text-2xl text-base-100"
     >
-      {text}
+      {content}
     </m.div>
   );
 };

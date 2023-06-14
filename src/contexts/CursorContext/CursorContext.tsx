@@ -20,8 +20,8 @@ export type MousePositionType = {
 interface CursorContextValues {
   variant: CursorVariantType;
   setVariant: Dispatch<SetStateAction<CursorVariantType>>;
-  text: string;
-  setText: Dispatch<SetStateAction<string>>;
+  content: JSX.Element;
+  setContent: Dispatch<SetStateAction<JSX.Element>>;
   mousePos: MousePositionType;
 }
 
@@ -35,7 +35,7 @@ interface CursorProviderProps {
 
 const CursorProvider: FC<CursorProviderProps> = ({ children }) => {
   const [variant, setVariant] = useState<CursorVariantType>("default");
-  const [text, setText] = useState("");
+  const [content, setContent] = useState(<></>);
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -53,7 +53,13 @@ const CursorProvider: FC<CursorProviderProps> = ({ children }) => {
 
   return (
     <CursorContext.Provider
-      value={{ variant, setVariant, text, setText, mousePos }}
+      value={{
+        variant,
+        setVariant,
+        content,
+        setContent,
+        mousePos,
+      }}
     >
       {children}
     </CursorContext.Provider>
@@ -67,7 +73,19 @@ const useCursor = () => {
     throw new Error("useCursor may only be used within the CursorContext");
   }
 
-  return context;
+  const { setVariant, setContent } = context;
+
+  function setCursor(variant: CursorVariantType, content?: JSX.Element) {
+    setContent(content ?? <></>);
+    setVariant(variant);
+  }
+
+  return {
+    variant: context.variant,
+    content: context.content,
+    mousePos: context.mousePos,
+    setCursor,
+  };
 };
 
 export { CursorProvider, useCursor };
