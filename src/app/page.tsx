@@ -1,3 +1,4 @@
+import Cursor from "@/components/Cursor/Cursor";
 import Hero from "@/components/Hero/Hero";
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import Project from "@/components/Project/Project";
@@ -8,13 +9,15 @@ import React from "react";
 export default function Home() {
   return (
     <PageWrapper className="flex flex-col">
+      <Cursor />
+
       <Hero />
 
       <div className="flex flex-col gap-20 h-[75vh]">
         <ThinkCreateDeliver />
         <div className="flex justify-center items-center gap-10">
           <div className="w-1/3">
-            <p className=" text-2xl">
+            <p className="text-2xl">
               Working at the intersection of creativity and user experience, I
               aim to provide memorable experiences with functionality that
               supports business growth.

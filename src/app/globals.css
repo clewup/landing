@@ -6,6 +6,10 @@
   @apply min-h-full;
 }
 
+* {
+  cursor: none;
+}
+
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
