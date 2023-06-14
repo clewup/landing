@@ -5,13 +5,20 @@ import {
   SiTwitter as TwitterIcon,
   SiGithub as GitHubIcon,
 } from "@icons-pack/react-simple-icons";
+import { useEffect, useState } from "react";
+import Clock from "react-live-clock";
 
 const Footer = () => {
   return (
     <div className="h-20 flex items-center justify-between px-10 bg-base-300">
       <span className="flex gap-5">
-        <p className="text-lg">© 2023 CLEWUP</p>
-        <p className="text-lg">Privacy Policy</p>
+        <p className="text-lg">© 2023</p>
+        <Clock
+          format={"HH:mm:ss"}
+          ticking={true}
+          timezone={"GB"}
+          className="text-lg"
+        />
       </span>
       <span className="flex gap-5 items-center">
         <a href="mailto:lewis@clewup.co.uk" className="text-lg">
