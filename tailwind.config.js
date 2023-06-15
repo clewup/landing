@@ -24,7 +24,7 @@ module.exports = {
     themes: [
       {
         landing: {
-          primary: "#fca311",
+          primary: "#FCA311",
           secondary: "#FF1654",
           accent: "#1FB2A5",
           neutral: "#CCCCCC",

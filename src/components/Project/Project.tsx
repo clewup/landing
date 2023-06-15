@@ -17,14 +17,14 @@ const Project: FC<ProjectProps> = ({ project }) => {
   const [isHovering, setHovering] = useState(false);
 
   const cursorContent = (
-    <div className="flex gap-2 items-center relative bg-primary rounded-[50%] h-[150px] w-[150px] justify-center opacity-90">
+    <div className="flex gap-2 bg-primary h-[150px] w-[150px] justify-center items-center rounded-[50%] opacity-90">
       <p className="underline font-bold">VIEW</p>
       <EyeIcon size={30} />
     </div>
   );
 
   function handleMouseEnter() {
-    setCursor("image", cursorContent, project.image);
+    setCursor("expand", cursorContent, project.image);
     setHovering(true);
   }
 

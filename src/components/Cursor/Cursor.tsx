@@ -11,8 +11,9 @@ const Cursor = () => {
     default: {
       x: mousePos.x - 16,
       y: mousePos.y - 16,
-      borderRadius: "50%",
-      backgroundImage: "",
+      height: 32,
+      width: 32,
+      backgroundColor: "#FFFFFF",
     },
 
     expand: {
@@ -20,21 +21,20 @@ const Cursor = () => {
       y: mousePos.y - 75,
       width: 150,
       height: 150,
-      mixBlendMode: "difference",
-      borderRadius: "50%",
-      backgroundImage: "",
+      backgroundColor: "#FCA311",
     },
 
-    image: {
-      x: mousePos.x - 320,
-      y: mousePos.y - 180,
-      backgroundImage: `url(${image})`,
-      backgroundSize: "cover",
-      width: 640,
-      height: 360,
-      borderRadius: "0%",
+    text: {
+      x: mousePos.x - 75,
+      y: mousePos.y - 75,
+      width: 150,
+      height: 150,
+      backgroundColor: "#FCA311",
+      mixBlendMode: "difference",
     },
   };
+
+  const selectedVariant = cursorVariants[variant];
 
   return (
     <m.div
@@ -42,9 +42,28 @@ const Cursor = () => {
       variants={cursorVariants}
       transition={{ type: "just" }}
       animate={variant}
-      className="landing-cursor rounded-[50%] bg-white h-[32px] w-[32px] fixed top-0 left-0 pointer-events-none z-50 flex justify-center items-center text-2xl text-base-100"
+      className="landing-cursor fixed top-0 left-0 h-[32px] z-50 w-[32px] pointer-events-none rounded-[50%] flex justify-center items-center text-2xl text-base-100"
     >
-      {content}
+      <div
+        className={`fixed z-50 h-[${selectedVariant.height}px] w-[${selectedVariant.width}px] rounded-[50%] flex justify-center items-center`}
+      >
+        {content}
+      </div>
+
+      {image && (
+        <m.div
+          className="fixed w-[500px] z-40"
+          variants={{
+            hidden: { scale: 0 },
+            visible: { scale: [0, 1.1, 1] },
+          }}
+          transition={{ duration: 0.5 }}
+          initial="hidden"
+          animate="visible"
+        >
+          <img src={image} />
+        </m.div>
+      )}
     </m.div>
   );
 };

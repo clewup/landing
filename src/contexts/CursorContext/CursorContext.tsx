@@ -11,7 +11,7 @@ import {
   useState,
 } from "react";
 
-export type CursorVariantType = "default" | "expand" | "image";
+export type CursorVariantType = "default" | "expand" | "text";
 export type MousePositionType = {
   x: number;
   y: number;
