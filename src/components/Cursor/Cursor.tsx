@@ -25,11 +25,11 @@ const Cursor = () => {
     },
 
     text: {
-      x: mousePos.x - 75,
-      y: mousePos.y - 75,
-      width: 150,
-      height: 150,
-      backgroundColor: "#FCA311",
+      x: mousePos.x - 37.5,
+      y: mousePos.y - 37.5,
+      width: 75,
+      height: 75,
+      backgroundColor: "#FFFFFF",
       mixBlendMode: "difference",
     },
   };
