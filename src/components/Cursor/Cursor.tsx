@@ -2,6 +2,7 @@
 
 import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import { motion as m } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 const Cursor = () => {
@@ -52,7 +53,7 @@ const Cursor = () => {
 
       {image && (
         <m.div
-          className="fixed w-[500px] z-40"
+          className="fixed w-[700px] h-[400px] z-40"
           variants={{
             hidden: { scale: 0 },
             visible: { scale: [0, 1.1, 1] },
@@ -61,7 +62,7 @@ const Cursor = () => {
           initial="hidden"
           animate="visible"
         >
-          <img src={image} />
+          <Image src={image} alt="" fill={true} className="object-cover" />
         </m.div>
       )}
     </m.div>
