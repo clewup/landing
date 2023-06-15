@@ -3,7 +3,7 @@ import Hero from "@/components/Hero/Hero";
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import Project from "@/components/Project/Project";
 import Introduction from "@/components/Introduction/Introduction";
-import projects from "@/data/projects";
+import projects from "@/constants/projects";
 import React from "react";
 
 export default function Home() {

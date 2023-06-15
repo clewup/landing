@@ -4,7 +4,7 @@ const projects: ProjectType[] = [
   {
     name: "lockr",
     description:
-      "A centralised, passwordless authentication application designed to seamlessly integrate with my other applications and prevent repeated registration.",
+      "A centralised, passwordless authentication service designed to seamlessly integrate with other applications and securely store user information.",
     category: "web application",
     image:
       "https://res.cloudinary.com/dliog6kq6/image/upload/v1686607599/Screenshot_2023-06-12_at_18.05.23_nrfrqg.png",

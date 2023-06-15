@@ -1,6 +1,6 @@
 "use client";
 
-import metadata from "@/data/metadata";
+import metadata from "@/constants/metadata";
 import {
   SiTwitter as TwitterIcon,
   SiGithub as GitHubIcon,
