@@ -32,6 +32,7 @@ const Cursor = () => {
       backgroundSize: "cover",
       width: 640,
       height: 360,
+      borderRadius: "0%",
     },
   };
 
@@ -41,7 +42,7 @@ const Cursor = () => {
       variants={cursorVariants}
       transition={{ type: "just" }}
       animate={variant}
-      className="landing-cursor bg-white h-[32px] w-[32px] fixed top-0 left-0 pointer-events-none z-50 flex justify-center items-center text-2xl text-base-100"
+      className="landing-cursor rounded-[50%] bg-white h-[32px] w-[32px] fixed top-0 left-0 pointer-events-none z-50 flex justify-center items-center text-2xl text-base-100"
     >
       {content}
     </m.div>
