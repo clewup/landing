@@ -11,7 +11,7 @@ import {
   useState,
 } from "react";
 
-export type CursorVariantType = "default" | "expand";
+export type CursorVariantType = "default" | "expand" | "image";
 export type MousePositionType = {
   x: number;
   y: number;
@@ -22,6 +22,8 @@ interface CursorContextValues {
   setVariant: Dispatch<SetStateAction<CursorVariantType>>;
   content: JSX.Element;
   setContent: Dispatch<SetStateAction<JSX.Element>>;
+  image: string | null;
+  setImage: Dispatch<SetStateAction<string | null>>;
   mousePos: MousePositionType;
 }
 
@@ -36,6 +38,7 @@ interface CursorProviderProps {
 const CursorProvider: FC<CursorProviderProps> = ({ children }) => {
   const [variant, setVariant] = useState<CursorVariantType>("default");
   const [content, setContent] = useState(<></>);
+  const [image, setImage] = useState<string | null>(null);
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -58,6 +61,8 @@ const CursorProvider: FC<CursorProviderProps> = ({ children }) => {
         setVariant,
         content,
         setContent,
+        image,
+        setImage,
         mousePos,
       }}
     >
@@ -73,16 +78,22 @@ const useCursor = () => {
     throw new Error("useCursor may only be used within the CursorContext");
   }
 
-  const { setVariant, setContent } = context;
+  const { setVariant, setContent, setImage } = context;
 
-  function setCursor(variant: CursorVariantType, content?: JSX.Element) {
+  function setCursor(
+    variant: CursorVariantType,
+    content?: JSX.Element,
+    image?: string
+  ) {
     setContent(content ?? <></>);
     setVariant(variant);
+    setImage(image ?? null);
   }
 
   return {
     variant: context.variant,
     content: context.content,
+    image: context.image,
     mousePos: context.mousePos,
     setCursor,
   };
