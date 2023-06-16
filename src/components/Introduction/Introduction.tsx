@@ -42,50 +42,10 @@ const Introduction = () => {
           onMouseEnter={() => setCursor("text")}
           onMouseLeave={() => setCursor("default")}
         >
-          Working at the intersection of creativity and user experience, I aim
-          to provide memorable experiences with functionality that supports
-          business growth.
+          By operating at the crossroads of creativity and user experience, my
+          goal is to deliver captivating experiences while ensuring functional
+          solutions that drive business growth.
         </p>
-      </div>
-
-      <div className="flex flex-col gap-20 pb-20">
-        <div className="w-full px-40 flex justify-between">
-          <h2 className="text-2xl font-bold">SERVICES</h2>
-          <span className="text-2xl w-1/5">
-            <p>UI/UX DEVELOPMENT</p>
-            <p>API DEVELOPMENT</p>
-            <p>CLOUD COMPUTING</p>
-          </span>
-        </div>
-
-        <div className="px-40 flex justify-between">
-          <h2 className="text-2xl font-bold">FRAMEWORKS/LIBRARIES</h2>
-          <span className="text-2xl w-1/5">
-            <p>REACT.JS</p>
-            <p>NEXT.JS</p>
-            <p>.NET</p>
-            <p>NEST.JS</p>
-            <p>NODE.JS</p>
-          </span>
-        </div>
-
-        <div className="px-40 flex justify-between">
-          <h2 className="text-2xl font-bold">LANGUAGES</h2>
-          <span className="text-2xl w-1/5">
-            <p>TYPESCRIPT</p>
-            <p>C#</p>
-            <p>SASS</p>
-          </span>
-        </div>
-
-        <div className="px-40 flex justify-between">
-          <h2 className="text-2xl font-bold">DATABASES</h2>
-          <span className="text-2xl w-1/5">
-            <p>MSSQL</p>
-            <p>POSTGRES</p>
-            <p>MONGODB</p>
-          </span>
-        </div>
       </div>
     </div>
   );
