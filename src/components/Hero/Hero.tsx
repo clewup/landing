@@ -1,8 +1,6 @@
 "use client";
 
-import RevealText from "@/lib/framer-motion/components/RevealText";
 import { AnimatePresence, motion as m } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 const Hero = () => {
   const headlineVariants = {
@@ -47,7 +45,19 @@ const Hero = () => {
           <h2 className="text-9xl font-semibold text-primary">&nbsp;&</h2>
         </m.span>
         <m.span variants={headlineVariants}>
-          <RevealText className="text-9xl font-semibold">DEVELOPER</RevealText>
+          <div className="relative overflow-hidden w-fit">
+            <p className="text-9xl font-semibold">DEVELOPER</p>
+            <m.div
+              variants={{
+                hidden: { left: 0 },
+                visible: { left: "100%" },
+              }}
+              transition={{ duration: 0.4, ease: "easeInOut", delay: 0.2 }}
+              initial="hidden"
+              whileInView="visible"
+              className="absolute top-0 bottom-0 left-0 right-0 bg-primary z-20"
+            />
+          </div>
         </m.span>
         <m.span
           variants={{
