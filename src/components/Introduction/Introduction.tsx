@@ -17,7 +17,7 @@ const Introduction = () => {
   const opacityThree = useTransform(scrollYProgress, [0.5, 0.7], [0, 1]);
 
   return (
-    <div className="flex flex-col gap-20 h-[75vh]">
+    <div className="flex flex-col justify-center gap-32 min-h-screen">
       <m.div
         ref={targetRef}
         className="p-5 flex gap-5 justify-center items-center"
@@ -36,25 +36,54 @@ const Introduction = () => {
         </m.h1>
       </m.div>
 
-      <div className="flex justify-center items-center gap-10">
-        <div className="w-1/3">
-          <p
-            className="text-2xl"
-            onMouseEnter={() => setCursor("text")}
-            onMouseLeave={() => setCursor("default")}
-          >
-            Working at the intersection of creativity and user experience, I aim
-            to provide memorable experiences with functionality that supports
-            business growth.
-          </p>
+      <div className="flex flex-col justify-center px-40">
+        <p
+          className="text-7xl"
+          onMouseEnter={() => setCursor("text")}
+          onMouseLeave={() => setCursor("default")}
+        >
+          Working at the intersection of creativity and user experience, I aim
+          to provide memorable experiences with functionality that supports
+          business growth.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-20 pb-20">
+        <div className="w-full px-40 flex justify-between">
+          <h2 className="text-2xl font-bold">SERVICES</h2>
+          <span className="text-2xl w-1/5">
+            <p>UI/UX DEVELOPMENT</p>
+            <p>API DEVELOPMENT</p>
+            <p>CLOUD COMPUTING</p>
+          </span>
         </div>
-        <div className="w-1/3 flex flex-col items-end gap-20">
-          <span>
-            <h2 className="text-4xl font-bold">SERVICES</h2>
-            <span className="text-2xl">
-              <p>UI/UX Development</p>
-              <p>API Development</p>
-            </span>
+
+        <div className="px-40 flex justify-between">
+          <h2 className="text-2xl font-bold">FRAMEWORKS/LIBRARIES</h2>
+          <span className="text-2xl w-1/5">
+            <p>REACT.JS</p>
+            <p>NEXT.JS</p>
+            <p>.NET</p>
+            <p>NEST.JS</p>
+            <p>NODE.JS</p>
+          </span>
+        </div>
+
+        <div className="px-40 flex justify-between">
+          <h2 className="text-2xl font-bold">LANGUAGES</h2>
+          <span className="text-2xl w-1/5">
+            <p>TYPESCRIPT</p>
+            <p>C#</p>
+            <p>SASS</p>
+          </span>
+        </div>
+
+        <div className="px-40 flex justify-between">
+          <h2 className="text-2xl font-bold">DATABASES</h2>
+          <span className="text-2xl w-1/5">
+            <p>MSSQL</p>
+            <p>POSTGRES</p>
+            <p>MONGODB</p>
           </span>
         </div>
       </div>
