@@ -17,9 +17,8 @@ const Project: FC<ProjectProps> = ({ project }) => {
   const [isHovering, setHovering] = useState(false);
 
   const cursorContent = (
-    <div className="flex gap-2 bg-primary h-[150px] w-[150px] justify-center items-center rounded-[50%] opacity-90">
-      <p className="underline font-bold">VIEW</p>
-      <EyeIcon size={30} />
+    <div className="flex bg-primary h-[150px] w-[150px] justify-center items-center rounded-[50%]">
+      <p className="underline font-bold text-xl">VIEW</p>
     </div>
   );
 
@@ -39,7 +38,7 @@ const Project: FC<ProjectProps> = ({ project }) => {
         variants={{ initial: { x: 0 }, hover: { x: 0 } }}
         initial="initial"
         whileHover="hover"
-        className="flex justify-between gap-10 p-5 py-20 border-y-[1px]"
+        className="flex justify-between gap-10 py-20 border-y-[1px]"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

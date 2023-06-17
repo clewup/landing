@@ -22,7 +22,7 @@ const Cursor = () => {
       y: mousePos.y - 75,
       width: 150,
       height: 150,
-      backgroundColor: "#FCA311",
+      backgroundColor: "#ff4d01",
     },
 
     text: {
@@ -31,6 +31,16 @@ const Cursor = () => {
       width: 75,
       height: 75,
       backgroundColor: "#FFFFFF",
+      mixBlendMode: "difference",
+    },
+
+    link: {
+      x: mousePos.x - 16,
+      y: mousePos.y - 16,
+      width: 32,
+      height: 32,
+      border: "2px solid",
+      borderColor: "#ff4d01",
       mixBlendMode: "difference",
     },
   };
@@ -43,7 +53,7 @@ const Cursor = () => {
       variants={cursorVariants}
       transition={{ type: "just" }}
       animate={variant}
-      className="landing-cursor fixed top-0 left-0 h-[32px] z-50 w-[32px] pointer-events-none rounded-[50%] flex justify-center items-center text-2xl text-base-100"
+      className="landing-cursor fixed top-0 left-0 h-[32px] z-50 w-[32px] pointer-events-none rounded-[50%] flex justify-center items-center text-2xl text-base"
     >
       <div
         className={`fixed z-50 h-[${selectedVariant.height}px] w-[${selectedVariant.width}px] rounded-[50%] flex justify-center items-center`}
