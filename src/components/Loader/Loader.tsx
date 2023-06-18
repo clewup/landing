@@ -63,13 +63,13 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
           I&apos;M
         </m.p>
       </span>
-      <m.p
+      <m.img
         variants={logoVariants}
-        className="text-[350px] font-bold -mt-52"
+        className="-mt-36 h-[350px] px-5 w-full object-contain"
+        src="https://res.cloudinary.com/dliog6kq6/image/upload/v1687095992/LEWIS_J_idjcjb.png"
+        alt=""
         layoutId="logo"
-      >
-        LEWIS J
-      </m.p>
+      />
     </m.div>
   );
 };
