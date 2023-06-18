@@ -4,7 +4,10 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <section id="projects">
+    <section
+      id="projects"
+      className="min-h-screen flex flex-col justify-center"
+    >
       {projects.map((project, index) => (
         <Project key={index} project={project} />
       ))}

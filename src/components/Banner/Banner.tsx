@@ -19,12 +19,7 @@ const Banner = () => {
   };
 
   return (
-    <m.section
-      variants={bannerVariants}
-      initial="hidden"
-      animate="visible"
-      className="h-screen overflow-y-scroll no-scrollbar"
-    >
+    <m.section variants={bannerVariants} initial="hidden" animate="visible">
       <Introduction />
       <Process />
       <Values />

@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   return (
-    <m.div className="fixed w-full flex justify-between p-5 right-0 top-0 backdrop-blur items-center z-40">
+    <m.div className="h-[15vh] w-full flex justify-between p-5 backdrop-blur items-center z-40">
       <Link
         href="/"
         onMouseEnter={handleMouseEnter}

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        "screen-header": "90vh",
+        "screen-header": "85vh",
       },
       fontFamily: {
         sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
