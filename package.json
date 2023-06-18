@@ -27,6 +27,7 @@
     "postcss": "^8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-fast-marquee": "^1.6.0",
     "react-feather": "^2.0.10",
     "react-live-clock": "^6.1.13",
     "react-moment": "^1.1.3",

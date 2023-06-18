@@ -1,6 +1,8 @@
 import "./globals.css";
+import Providers from "@/app/providers";
 import Footer from "@/components/Footer/Footer";
 import { CursorProvider } from "@/contexts/CursorContext/CursorContext";
+import { AnimatePresence } from "framer-motion";
 import { ReactNode } from "react";
 
 export const metadata = {
@@ -11,14 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="bg-base text-white">
-      <CursorProvider>
-        <body>
+      <body>
+        <Providers>
           <div className="w-screen overflow-x-hidden">
             <span className="min-h-screen">{children}</span>
             <Footer />
           </div>
-        </body>
-      </CursorProvider>
+        </Providers>
+      </body>
     </html>
   );
 }

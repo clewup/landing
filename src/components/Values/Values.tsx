@@ -13,8 +13,8 @@ const Values = () => {
         onMouseEnter={() => setCursor("text")}
         onMouseLeave={() => setCursor("default")}
       >
-        Operating at the crossroads of creativity and user experience, my goal
-        is to deliver captivating experiences.
+        Operating at the crossroads of creativity and user experience, my
+        ultimate goal is to deliver captivating experiences.
       </p>
     </div>
   );

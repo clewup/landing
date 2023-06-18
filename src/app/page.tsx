@@ -1,6 +1,6 @@
 import Cursor from "@/components/Cursor/Cursor";
 import Menu from "@/components/Menu/Menu";
-import Hero from "@/components/Hero/Hero";
+import Banner from "@/components/Banner/Banner";
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import Projects from "@/components/Projects/Projects";
 import Summary from "@/components/Summary/Summary";
@@ -15,7 +15,7 @@ export default function Home() {
       <Menu />
 
       {/*PAGE CONTENT*/}
-      <Hero />
+      <Banner />
       <Projects />
       <Summary />
     </PageWrapper>

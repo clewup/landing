@@ -1,19 +1,29 @@
 "use client";
 
-import React from "react";
+import StaggeredLetters from "@/lib/framer/components/StaggeredLetters/StaggeredLetters";
+import React, { FC, useEffect, useState } from "react";
+import { motion as m, Variants } from "framer-motion";
+import Marquee from "react-fast-marquee";
 
 const Introduction = () => {
   return (
-    <div className="flex items-center h-screen">
+    <div className="flex items-center h-screen w-full">
       <div>
-        <p className="text-7xl">LEWIS J</p>
+        <StaggeredLetters className="ml-20 text-9xl font-bold">
+          I AM A
+        </StaggeredLetters>
 
-        <div className="text-9xl font-bold flex gap-5">
-          <h1 className="stroke-text">CREATIVE</h1>
-          <h1>DEVELOPER.</h1>
+        <Marquee speed={200}>
+          <StaggeredLetters className="text-9xl font-bold">
+            CREATIVE DEVELOPER
+          </StaggeredLetters>
+        </Marquee>
+
+        <div className="flex justify-end">
+          <StaggeredLetters className="text-9xl font-bold mr-20">
+            BASED IN ENGLAND
+          </StaggeredLetters>
         </div>
-
-        <p className="text-7xl">BASED IN ENGLAND.</p>
       </div>
     </div>
   );
