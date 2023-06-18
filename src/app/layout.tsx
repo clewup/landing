@@ -1,7 +1,9 @@
 import "./globals.css";
 import Providers from "@/app/providers";
+import Cursor from "@/components/Cursor/Cursor";
 import Footer from "@/components/Footer/Footer";
-import { ReactNode } from "react";
+import Header from "@/components/Header/Header";
+import React, { ReactNode } from "react";
 
 export const metadata = {
   title: "Lewis J - Creative Developer",
@@ -13,8 +15,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className="bg-base text-white">
       <body>
         <Providers>
-          <div className="w-screen overflow-x-hidden">
-            <span className="min-h-screen">{children}</span>
+          <div className="w-[100vw] overflow-x-hidden">
+            <Header />
+            <Cursor />
+            {children}
             <Footer />
           </div>
         </Providers>

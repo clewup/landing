@@ -1,4 +1,4 @@
-import Skill from "@/components/Skill/Skill";
+import Skill from "@/components/Summary/components/Skill/Skill";
 import Image from "next/image";
 import React from "react";
 

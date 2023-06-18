@@ -1,9 +1,9 @@
 "use client";
 
-import Introduction from "@/components/Introduction/Introduction";
+import Introduction from "@/components/Banner/components/Introduction/Introduction";
 import Loader from "@/components/Loader/Loader";
-import Process from "@/components/Process/Process";
-import Values from "@/components/Values/Values";
+import Process from "@/components/Banner/components/Process/Process";
+import Values from "@/components/Banner/components/Values/Values";
 
 import { motion as m, Variants } from "framer-motion";
 

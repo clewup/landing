@@ -1,4 +1,4 @@
-import Project from "@/components/Project/Project";
+import Project from "@/components/Projects/components/Project/Project";
 import projects from "@/constants/projects";
 import React from "react";
 

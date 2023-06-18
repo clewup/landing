@@ -10,7 +10,7 @@ import {
 } from "react-feather";
 import { motion as m } from "framer-motion";
 
-const Menu = () => {
+const Header = () => {
   const { setCursor } = useCursor();
   const router = useRouter();
 
@@ -84,4 +84,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default Header;
