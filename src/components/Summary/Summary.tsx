@@ -5,9 +5,11 @@ import React from "react";
 
 const Summary = () => {
   return (
-    <section id="summary" className="min-h-screen flex justify-end">
-      <div className="flex flex-col gap-20 justify-center w-1/2">
-        <h1 className="text-7xl italic underline">IN A NUTSHELL</h1>
+    <section
+      id="summary"
+      className="min-h-screen flex gap-20 items-center justify-end"
+    >
+      <div className="flex flex-col gap-20 w-1/2">
         <Skill
           heading="SERVICES"
           areas={["UI/UX DEVELOPMENT", "API DEVELOPMENT", "CLOUD COMPUTING"]}
@@ -15,7 +17,15 @@ const Summary = () => {
 
         <Skill
           heading="FRAMEWORKS/LIBRARIES"
-          areas={["REACT.JS", "NEXT.JS", ".NET", "NEST.JS", "NODE.JS"]}
+          areas={[
+            "REACT.JS",
+            "NEXT.JS",
+            ".NET",
+            "NEST.JS",
+            "NODE.JS",
+            "TAILWIND",
+            "FRAMER",
+          ]}
         />
 
         <Skill heading="LANGUAGES" areas={["TYPESCRIPT", "C#", "SASS"]} />
