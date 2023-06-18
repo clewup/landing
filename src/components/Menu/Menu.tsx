@@ -1,6 +1,7 @@
 "use client";
 
 import { useCursor } from "@/contexts/CursorContext/CursorContext";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   Monitor as MonitorIcon,
@@ -33,8 +34,12 @@ const Menu = () => {
   };
 
   return (
-    <m.div className="fixed w-screen flex justify-between right-0 top-0  p-5 backdrop-blur items-center z-40">
-      <div>
+    <m.div className="fixed w-full flex justify-between p-5 right-0 top-0 backdrop-blur items-center z-40">
+      <Link
+        href="/"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <m.img
           src="https://res.cloudinary.com/dliog6kq6/image/upload/v1687095992/LEWIS_J_idjcjb.png"
           alt=""
@@ -46,11 +51,11 @@ const Menu = () => {
           variants={sublogoVariants}
           initial="hidden"
           animate="visible"
-          className="text-xl text-primary"
+          className="text-xl text-primary font-bold"
         >
           CREATIVE DEVELOPER
         </m.p>
-      </div>
+      </Link>
 
       <div className="flex flex-col gap-2">
         <div

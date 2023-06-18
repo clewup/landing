@@ -41,7 +41,6 @@ const Cursor = () => {
       height: 32,
       border: "2px solid",
       borderColor: "#ff4d01",
-      mixBlendMode: "difference",
     },
   };
 
