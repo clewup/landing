@@ -1,8 +1,7 @@
 "use client";
 
 import StaggeredLetters from "@/lib/framer/components/StaggeredLetters/StaggeredLetters";
-import React, { FC, useEffect, useState } from "react";
-import { motion as m, Variants } from "framer-motion";
+import React from "react";
 import Marquee from "react-fast-marquee";
 
 const Introduction = () => {

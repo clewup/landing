@@ -1,7 +1,7 @@
 "use client";
 
-import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
-import { AnimatePresence, motion as m, Variants } from "framer-motion";
+import { Dispatch, FC, SetStateAction } from "react";
+import { motion as m, Variants } from "framer-motion";
 
 interface LoaderProps {
   setLoading: Dispatch<SetStateAction<boolean>>;
@@ -33,9 +33,22 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
     },
   };
 
+  const logoVariants: Variants = {
+    hidden: {
+      y: 1000,
+    },
+    visible: {
+      y: 0,
+      transition: {
+        ease: [0.6, 0.1, -0.5, 0.95],
+        duration: 3,
+      },
+    },
+  };
+
   return (
     <m.div
-      className="fixed flex flex-col h-screen w-screen justify-center bg-base z-40"
+      className="fixed flex flex-col h-screen w-screen justify-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -50,7 +63,11 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
           I&apos;M
         </m.p>
       </span>
-      <m.p variants={wordVariants} className="text-[350px] font-bold -mt-52 ">
+      <m.p
+        variants={logoVariants}
+        className="text-[350px] font-bold -mt-52"
+        layoutId="logo"
+      >
         LEWIS J
       </m.p>
     </m.div>

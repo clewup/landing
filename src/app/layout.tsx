@@ -1,8 +1,6 @@
 import "./globals.css";
 import Providers from "@/app/providers";
 import Footer from "@/components/Footer/Footer";
-import { CursorProvider } from "@/contexts/CursorContext/CursorContext";
-import { AnimatePresence } from "framer-motion";
 import { ReactNode } from "react";
 
 export const metadata = {
