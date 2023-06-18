@@ -33,8 +33,23 @@ const Header = () => {
     },
   };
 
+  const headerLinks = [
+    {
+      label: "me",
+      href: "#",
+    },
+    {
+      label: "projects",
+      href: "#projects",
+    },
+    {
+      label: "summary",
+      href: "#summary",
+    },
+  ];
+
   return (
-    <m.div className="h-[15vh] w-full flex justify-between p-5 backdrop-blur items-center z-40">
+    <m.div className="fixed h-[15vh] w-full flex justify-between p-5 z-40">
       <Link
         href="/"
         onMouseEnter={handleMouseEnter}
@@ -44,41 +59,31 @@ const Header = () => {
           src="https://res.cloudinary.com/dliog6kq6/image/upload/v1687095992/LEWIS_J_idjcjb.png"
           alt=""
           layoutId="logo"
-          className="h-10 w-full object-contain"
+          className="h-5 w-full object-contain"
           transition={{ duration: 0.7 }}
         />
         <m.p
           variants={sublogoVariants}
           initial="hidden"
           animate="visible"
-          className="text-xl text-primary font-bold"
+          className="text-xl font-bold text-primary"
         >
-          CREATIVE DEVELOPER
+          PFOLIO-23
         </m.p>
       </Link>
 
-      <div className="flex flex-col gap-2">
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => router.push("#")}
-        >
-          <MonitorIcon />
-        </div>
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => router.push("#projects")}
-        >
-          <CodeIcon />
-        </div>
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => router.push("#summary")}
-        >
-          <UserIcon />
-        </div>
+      <div className="flex flex-col gap-3">
+        {headerLinks.map((headerLink, index) => (
+          <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => router.push(headerLink.href)}
+            key={index}
+            className="rounded-2xl border-[1px] border-white px-3 uppercase text-center"
+          >
+            {headerLink.label}
+          </div>
+        ))}
       </div>
     </m.div>
   );

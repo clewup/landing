@@ -10,8 +10,6 @@ interface PageWrapperProps {
 }
 
 const PageWrapper: FC<PageWrapperProps> = ({ children, className }) => {
-  return (
-    <m.main className={cx("min-h-screen p-5", className)}>{children}</m.main>
-  );
+  return <m.main className={cx("min-h-screen", className)}>{children}</m.main>;
 };
 export default PageWrapper;

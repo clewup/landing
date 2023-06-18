@@ -62,7 +62,7 @@ const Cursor = () => {
 
       {image && (
         <m.div
-          className="fixed w-[700px] h-[400px] z-40"
+          className="fixed w-[700px] h-[400px] z-40 rounded-2xl"
           variants={{
             hidden: { scale: 0 },
             visible: { scale: [0, 1.1, 1] },
@@ -71,7 +71,12 @@ const Cursor = () => {
           initial="hidden"
           animate="visible"
         >
-          <Image src={image} alt="" fill={true} className="object-cover" />
+          <Image
+            src={image}
+            alt=""
+            fill={true}
+            className="object-cover rounded-2xl"
+          />
         </m.div>
       )}
     </m.div>

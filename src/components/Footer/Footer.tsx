@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <div className="h-20 flex items-center justify-between px-10">
       <span className="flex gap-5">
-        <p className="text-lg">© 2023</p>
+        <p className="text-lg">© ALL RIGHTS RESERVED</p>
         <Clock
           format={"HH:mm:ss"}
           ticking={true}

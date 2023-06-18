@@ -1,13 +1,12 @@
 "use client";
 
-import Introduction from "@/components/Banner/components/Introduction/Introduction";
-import Loader from "@/components/Loader/Loader";
-import Process from "@/components/Banner/components/Process/Process";
-import Values from "@/components/Banner/components/Values/Values";
+import Introduction from "@/components/Me/components/Introduction/Introduction";
+import Process from "@/components/Me/components/Process/Process";
+import Values from "@/components/Me/components/Values/Values";
 
 import { motion as m, Variants } from "framer-motion";
 
-const Banner = () => {
+const Me = () => {
   const bannerVariants: Variants = {
     hidden: {},
     visible: {
@@ -27,4 +26,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Me;

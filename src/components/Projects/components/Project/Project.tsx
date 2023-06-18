@@ -4,7 +4,6 @@ import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import { ProjectType } from "@/types/projectTypes";
 import Link from "next/link";
 import React, { FC, useState } from "react";
-import { Eye as EyeIcon } from "react-feather";
 import { motion as m } from "framer-motion";
 
 interface ProjectProps {
@@ -38,7 +37,7 @@ const Project: FC<ProjectProps> = ({ project }) => {
         variants={{ initial: { x: 0 }, hover: { x: 0 } }}
         initial="initial"
         whileHover="hover"
-        className="flex justify-between gap-10 py-20 border-y-[1px]"
+        className="flex justify-between gap-10 py-20 px-5 border-y-[1px]"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

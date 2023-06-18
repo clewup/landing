@@ -56,16 +56,16 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
       onAnimationComplete={() => setLoading(false)}
     >
       <span className="flex gap-5">
-        <m.p variants={wordVariants} className="text-[350px] font-bold ">
+        <m.p variants={wordVariants} className="text-[450px] font-bold ">
           HEY!
         </m.p>
-        <m.p variants={wordVariants} className="text-[350px] font-bold ">
+        <m.p variants={wordVariants} className="text-[450px] font-bold ">
           I&apos;M
         </m.p>
       </span>
       <m.img
         variants={logoVariants}
-        className="-mt-36 h-[350px] px-5 w-full object-contain"
+        className="-mt-36 w-full px-7"
         src="https://res.cloudinary.com/dliog6kq6/image/upload/v1687095992/LEWIS_J_idjcjb.png"
         alt=""
         layoutId="logo"
