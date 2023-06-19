@@ -22,7 +22,7 @@ const Header = () => {
     setCursor("default");
   }
 
-  const sublogoVariants = {
+  const variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -55,15 +55,15 @@ const Header = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <m.img
-          src="https://res.cloudinary.com/dliog6kq6/image/upload/v1687095992/LEWIS_J_idjcjb.png"
-          alt=""
-          layoutId="logo"
-          className="h-5 w-full object-contain"
-          transition={{ duration: 0.7 }}
-        />
         <m.p
-          variants={sublogoVariants}
+          className="text-2xl font-bold"
+          layoutId="logo"
+          transition={{ duration: 0.7 }}
+        >
+          LEWIS J
+        </m.p>
+        <m.p
+          variants={variants}
           initial="hidden"
           animate="visible"
           className="text-xl font-bold text-primary"
@@ -72,7 +72,12 @@ const Header = () => {
         </m.p>
       </Link>
 
-      <div className="flex flex-col gap-3">
+      <m.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col gap-3"
+      >
         {headerLinks.map((headerLink, index) => (
           <div
             onMouseEnter={handleMouseEnter}
@@ -84,7 +89,7 @@ const Header = () => {
             {headerLink.label}
           </div>
         ))}
-      </div>
+      </m.div>
     </m.div>
   );
 };

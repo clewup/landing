@@ -6,6 +6,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontSize: {
+        "10xl": "15rem",
+        "11xl": "25rem",
+      },
       height: {
         "screen-header": "85vh",
       },

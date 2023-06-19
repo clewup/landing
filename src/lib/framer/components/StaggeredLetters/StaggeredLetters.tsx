@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useEffect, useState } from "react";
-import { AnimatePresence, motion as m, Variants } from "framer-motion";
+import { motion as m, Variants } from "framer-motion";
 import cx from "classnames";
 
 interface StaggeredLettersProps {
@@ -33,7 +33,7 @@ const StaggeredLetters: FC<StaggeredLettersProps> = ({
 
   const letterVariants: Variants = {
     hidden: {
-      y: 200,
+      y: 500,
     },
     visible: {
       y: 0,

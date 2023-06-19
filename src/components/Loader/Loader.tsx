@@ -1,6 +1,6 @@
 "use client";
 
-import { Dispatch, FC, SetStateAction } from "react";
+import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import { motion as m, Variants } from "framer-motion";
 
 interface LoaderProps {
@@ -12,20 +12,19 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   };
 
-  const wordVariants: Variants = {
+  const percentageVariants: Variants = {
     hidden: {
-      y: 1000,
+      opacity: 0,
     },
     visible: {
-      y: 0,
+      opacity: 1,
       transition: {
-        ease: [0.6, 0.1, -0.5, 0.95],
-        duration: 3,
+        duration: 1,
       },
     },
     exit: {
@@ -35,41 +34,58 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
 
   const logoVariants: Variants = {
     hidden: {
-      y: 1000,
+      y: 500,
     },
     visible: {
       y: 0,
       transition: {
-        ease: [0.6, 0.1, -0.5, 0.95],
+        ease: [0.6, 0.1, -0.5, 0.9],
         duration: 3,
       },
     },
   };
 
+  const [percentage, setPercentage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (percentage < 100) {
+        setPercentage((prevPercentage) =>
+          prevPercentage < 100 ? prevPercentage + 1 : prevPercentage
+        );
+      } else {
+        clearInterval(interval);
+      }
+    }, 30);
+
+    return () => {
+      clearInterval(interval); // Cleanup the interval on component unmount
+    };
+  }, []);
+
   return (
     <m.div
-      className="fixed flex flex-col h-screen w-screen justify-center"
+      className="fixed h-screen w-screen"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       exit="exit"
       onAnimationComplete={() => setLoading(false)}
     >
-      <span className="flex gap-5">
-        <m.p variants={wordVariants} className="text-[450px] font-bold ">
-          HEY!
+      <div className="absolute right-10 top-10 overflow-hidden  ">
+        <m.p variants={percentageVariants} className="text-3xl">
+          {percentage}%
         </m.p>
-        <m.p variants={wordVariants} className="text-[450px] font-bold ">
-          I&apos;M
+      </div>
+      <div className="font-bold flex flex-col h-full justify-end">
+        <m.p
+          variants={logoVariants}
+          layoutId="logo"
+          className="text-11xl leading-[20rem]"
+        >
+          LEWIS J
         </m.p>
-      </span>
-      <m.img
-        variants={logoVariants}
-        className="-mt-36 w-full px-7"
-        src="https://res.cloudinary.com/dliog6kq6/image/upload/v1687095992/LEWIS_J_idjcjb.png"
-        alt=""
-        layoutId="logo"
-      />
+      </div>
     </m.div>
   );
 };
