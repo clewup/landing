@@ -42,6 +42,14 @@ const Cursor = () => {
       border: "2px solid",
       borderColor: "#ff4d01",
     },
+
+    blur: {
+      x: mousePos.x - 64,
+      y: mousePos.y - 64,
+      width: 128,
+      height: 128,
+      backdropFilter: "blur(5px)",
+    },
   };
 
   const selectedVariant = cursorVariants[variant];
