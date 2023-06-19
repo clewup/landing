@@ -71,7 +71,7 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
           variants={imageVariants}
           src={project.image}
           alt={project.name}
-          className="w-full aspect-square object-cover"
+          className="w-full aspect-square object-cover object-left"
         />
         <m.p
           variants={titleVariants}
