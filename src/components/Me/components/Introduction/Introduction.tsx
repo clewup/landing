@@ -20,7 +20,7 @@ const Introduction = () => {
     <div className="flex items-center min-h-screen w-full">
       <div>
         <StaggeredLetters className="ml-20 text-9xl" delay={0.5}>
-          I am a
+          I&apos;m Lewis, a
         </StaggeredLetters>
 
         <Marquee speed={200} delay={0.5}>
@@ -36,7 +36,7 @@ const Introduction = () => {
 
         <div className="flex justify-end w-screen -ml-20">
           <StaggeredLetters className="text-9xl" delay={0.5}>
-            based in England
+            based in England.
           </StaggeredLetters>
         </div>
       </div>
