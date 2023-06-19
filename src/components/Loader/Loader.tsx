@@ -8,6 +8,24 @@ interface LoaderProps {
 }
 
 const Loader: FC<LoaderProps> = ({ setLoading }) => {
+  const [percentage, setPercentage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (percentage < 100) {
+        setPercentage((prevPercentage) =>
+          prevPercentage < 100 ? prevPercentage + 1 : prevPercentage
+        );
+      } else {
+        clearInterval(interval);
+      }
+    }, 20);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const containerVariants: Variants = {
     hidden: {},
     visible: {
@@ -19,7 +37,7 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
 
   const percentageVariants: Variants = {
     hidden: {
-      opacity: 0,
+      opacity: 1,
     },
     visible: {
       opacity: 1,
@@ -33,35 +51,26 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
   };
 
   const logoVariants: Variants = {
-    hidden: {
-      y: 500,
-    },
+    hidden: { x: 0 },
     visible: {
-      y: 0,
+      x: 0,
       transition: {
-        ease: [0.6, 0.1, -0.5, 0.9],
         duration: 3,
       },
     },
   };
 
-  const [percentage, setPercentage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (percentage < 100) {
-        setPercentage((prevPercentage) =>
-          prevPercentage < 100 ? prevPercentage + 1 : prevPercentage
-        );
-      } else {
-        clearInterval(interval);
-      }
-    }, 30);
-
-    return () => {
-      clearInterval(interval); // Cleanup the interval on component unmount
-    };
-  }, []);
+  const backgroundVariants: Variants = {
+    initial: {
+      y: 0,
+    },
+    animate: {
+      y: "-100%",
+      transition: {
+        duration: 2,
+      },
+    },
+  };
 
   return (
     <m.div
@@ -72,8 +81,17 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
       exit="exit"
       onAnimationComplete={() => setLoading(false)}
     >
+      <m.div
+        variants={backgroundVariants}
+        initial="initial"
+        animate="animate"
+        className="absolute bg-white h-screen w-screen"
+      />
       <div className="absolute right-10 top-10 overflow-hidden  ">
-        <m.p variants={percentageVariants} className="text-3xl">
+        <m.p
+          variants={percentageVariants}
+          className="text-3xl mix-blend-difference"
+        >
           {percentage}%
         </m.p>
       </div>
@@ -81,7 +99,7 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
         <m.p
           variants={logoVariants}
           layoutId="logo"
-          className="text-11xl leading-[20rem]"
+          className="text-11xl leading-[20rem] mix-blend-difference"
         >
           LEWIS J
         </m.p>
