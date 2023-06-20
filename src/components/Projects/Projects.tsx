@@ -1,6 +1,6 @@
 "use client";
 
-import Project from "@/components/Projects/components/Project/Project";
+import Project from "@/components/Project/Project";
 import projects from "@/constants/projects";
 import useParallax from "@/lib/framer/hooks/useParallax/useParallax";
 import React, { useRef } from "react";
@@ -15,8 +15,7 @@ const Projects = () => {
   const y = useParallax(scrollYProgress, 500);
 
   return (
-    <section id="projects" className="min-h-screen">
-      <h1 className="text-10xl font-bold underline">Works</h1>
+    <section id="projects" className="min-h-screen px-5 flex items-center">
       <div className="grid grid-cols-3 gap-20 px-20">
         <Project project={projects[0]} />
         <Project project={projects[1]} />

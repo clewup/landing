@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className="bg-base text-white">
       <body>
         <Providers>
-          <div className="w-[100vw] overflow-x-hidden">
+          <div className="w-screen">
             <Header />
             <Cursor />
             {children}

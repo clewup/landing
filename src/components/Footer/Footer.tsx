@@ -21,7 +21,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="h-20 flex items-center justify-between px-10">
+    <div className="h-20 flex items-center justify-between px-10 bg-base-light">
       <span className="flex gap-5">
         <p className="text-lg">© ALL RIGHTS RESERVED</p>
         <Clock
