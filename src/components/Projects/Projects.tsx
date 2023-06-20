@@ -15,21 +15,13 @@ const Projects = () => {
   const y = useParallax(scrollYProgress, 500);
 
   return (
-    <section id="projects" className="min-h-screen relative">
-      <h1 className="absolute top-20 left-20 text-10xl font-bold underline">
-        Works
-      </h1>
-      <Project
-        project={projects[0]}
-        className="absolute bottom-40 left-40 h-72 w-72"
-      />
-      <Project
-        project={projects[1]}
-        className="absolute top-40 right-40 h-72 w-72"
-      />
-      <m.div style={{ y }} className="absolute bottom-0 left-[40%] h-96 w-96">
-        <Project project={projects[2]} className="h-96 w-96" />
-      </m.div>
+    <section id="projects" className="min-h-screen">
+      <h1 className="text-10xl font-bold underline">Works</h1>
+      <div className="grid grid-cols-3 gap-20 px-20">
+        <Project project={projects[0]} />
+        <Project project={projects[1]} />
+        <Project project={projects[2]} />
+      </div>
     </section>
   );
 };

@@ -22,8 +22,10 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
   );
 
   const containerVariants: Variants = {
-    initial: {},
+    initial: { scale: 1, zIndex: 0 },
     hover: {
+      scale: 1.1,
+      zIndex: 10,
       transition: {},
     },
   };
@@ -63,7 +65,7 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
         variants={containerVariants}
         initial="initial"
         whileHover="hover"
-        className="flex flex-col gap-10 w-full h-full"
+        className="relative flex flex-col gap-10 w-full h-full"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -71,7 +73,7 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
           variants={imageVariants}
           src={project.image}
           alt={project.name}
-          className="w-full aspect-square object-cover object-left"
+          className="w-full aspect-square object-cover object-left rounded-2xl"
         />
         <m.p
           variants={titleVariants}
