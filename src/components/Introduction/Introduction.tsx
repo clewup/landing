@@ -9,12 +9,15 @@ import processes from "@/constants/processes";
 import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import StaggeredLetters from "@/lib/framer/components/StaggeredLetters/StaggeredLetters";
 
-import { motion as m, Variants } from "framer-motion";
-import React, { useState } from "react";
+import { motion as m, useInView, Variants } from "framer-motion";
+import React, { useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 const Introduction = () => {
   const { setCursor } = useCursor();
+
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
 
   const containerVariants: Variants = {
     hidden: {},
@@ -28,14 +31,20 @@ const Introduction = () => {
 
   return (
     <m.section variants={containerVariants} initial="hidden" animate="visible">
-      <div className="flex items-center min-h-screen w-full">
+      <div className="flex items-center min-h-screen w-full" ref={ref}>
         <div>
-          <StaggeredLetters
-            className="ml-20 text-9xl text-gray-300"
-            delay={0.5}
+          <div
+            className="ml-20"
+            style={{
+              opacity: isInView ? 1 : 0,
+              transform: isInView ? "none" : "translateX(-5%)",
+              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0s",
+            }}
           >
-            I&apos;m Lewis, a
-          </StaggeredLetters>
+            <StaggeredLetters className=" text-9xl text-gray-300" delay={0.5}>
+              I&apos;m Lewis, a
+            </StaggeredLetters>
+          </div>
 
           <Marquee speed={200} delay={0.5}>
             <span
@@ -51,7 +60,14 @@ const Introduction = () => {
             </span>
           </Marquee>
 
-          <div className="flex justify-end w-screen -ml-20">
+          <div
+            className="flex justify-end w-screen -ml-20"
+            style={{
+              opacity: isInView ? 1 : 0,
+              transform: isInView ? "none" : "translateX(10%)",
+              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0s",
+            }}
+          >
             <StaggeredLetters className="text-9xl text-gray-300" delay={0.5}>
               based in England.
             </StaggeredLetters>
