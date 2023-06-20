@@ -31,7 +31,10 @@ const Introduction = () => {
 
   return (
     <m.section variants={containerVariants} initial="hidden" animate="visible">
-      <div className="flex items-center min-h-screen w-full" ref={ref}>
+      <div
+        className="flex items-center min-h-screen w-screen overflow-x-hidden"
+        ref={ref}
+      >
         <div>
           <div
             className="ml-20"
