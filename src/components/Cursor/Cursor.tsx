@@ -60,7 +60,7 @@ const Cursor = () => {
       variants={cursorVariants}
       transition={{ type: "just" }}
       animate={variant}
-      className="landing-cursor fixed top-0 left-0 h-[32px] z-50 w-[32px] pointer-events-none rounded-[50%] flex justify-center items-center text-2xl text-base"
+      className="hidden landing-cursor fixed top-0 left-0 h-[32px] z-50 w-[32px] pointer-events-none rounded-[50%] justify-center items-center text-2xl text-base md:flex"
     >
       <div
         className={`fixed z-50 h-[${selectedVariant.height}px] w-[${selectedVariant.width}px] rounded-[50%] flex justify-center items-center`}

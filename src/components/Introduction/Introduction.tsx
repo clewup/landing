@@ -22,24 +22,24 @@ const Introduction = () => {
     <m.section variants={containerVariants} initial="hidden" animate="visible">
       <div className="flex items-center min-h-screen w-screen overflow-x-hidden">
         <div className="px-5">
-          <StaggeredLetters className="text-9xl" delay={0.5}>
+          <StaggeredLetters className="text-5xl md:text-9xl" delay={0.5}>
             I&apos;m Lewis, a
           </StaggeredLetters>
 
           <StaggeredLetters
-            className="text-10xl font-bold leading-[9rem]"
+            className="text-7xl font-bold md:text-10xl md:leading-[9rem]"
             delay={0.5}
           >
             creative developer
           </StaggeredLetters>
 
-          <StaggeredLetters className="text-9xl" delay={0.5}>
+          <StaggeredLetters className="text-5xl md:text-9xl" delay={0.5}>
             based in England.
           </StaggeredLetters>
         </div>
       </div>
 
-      <div className="relative flex w-full gap-20 px-20 items-start">
+      <div className="relative flex w-full gap-20 px-5 items-start flex-col md:flex-row md:px-20">
         <div className="w-full py-[50%]">
           <ul>
             {processes.map((process, index) => (
@@ -49,7 +49,7 @@ const Introduction = () => {
             ))}
           </ul>
         </div>
-        <div className="w-full sticky top-0 h-screen flex flex-col gap-20 items-center justify-center">
+        <div className="w-full sticky top-0 h-screen flex-col gap-20 items-center justify-center hidden md:flex">
           <div className="w-2/3">
             <h1 className="text-6xl font-bold">WHAT I DO</h1>
           </div>

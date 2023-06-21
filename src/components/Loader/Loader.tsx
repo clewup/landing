@@ -99,7 +99,7 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
         <m.p
           variants={logoVariants}
           layoutId="logo"
-          className="text-11xl leading-[20rem] mix-blend-difference"
+          className="text-8xl mix-blend-difference md:text-11xl md:leading-[20rem]"
         >
           LEWIS J
         </m.p>

@@ -30,7 +30,7 @@ const ListItem: FC<ListItemProps> = ({ children, id }) => {
     >
       <p
         className={cx(
-          "text-5xl py-16 font-bold transition-colors",
+          "text-4xl py-16 font-bold transition-colors md:text-5xl",
           isInView ? "text-white" : "text-base-light"
         )}
         ref={ref}

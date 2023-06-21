@@ -11,9 +11,9 @@ const Summary = () => {
   return (
     <section
       id="summary"
-      className="min-h-screen flex gap-20 items-center justify-end"
+      className="min-h-screen flex gap-20 flex-col py-20 px-5 justify-end md:px-0 md:items-center md:flex-row"
     >
-      <div className="w-1/2 flex flex-col items-center gap-10">
+      <div className="flex flex-col items-center justify-center gap-10 md:w-1/2">
         <h1 className="text-6xl font-bold">REACH OUT</h1>
 
         <button
@@ -25,7 +25,7 @@ const Summary = () => {
           <SendIcon className="text-primary" />
         </button>
       </div>
-      <div className="flex flex-col gap-20 w-1/2 ">
+      <div className="flex flex-col gap-10 md:w-1/2 md:gap-20">
         <KeyArea
           area="SERVICES"
           skills={["UI/UX DEVELOPMENT", "API DEVELOPMENT", "CLOUD COMPUTING"]}

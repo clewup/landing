@@ -49,7 +49,7 @@ const Header = () => {
   ];
 
   return (
-    <m.div className="fixed h-[15vh] w-full flex justify-between p-5 z-40">
+    <m.div className="fixed h-[15vh] w-screen flex justify-between p-5 z-40">
       <Link
         href="/"
         onMouseEnter={handleMouseEnter}
