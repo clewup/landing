@@ -2,9 +2,8 @@
 
 import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import { ProjectType } from "@/types/projectTypes";
-import Image from "next/image";
 import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { motion as m, Variants } from "framer-motion";
 
 interface ProjectProps {
@@ -15,19 +14,11 @@ interface ProjectProps {
 const Project: FC<ProjectProps> = ({ project, className }) => {
   const { setCursor } = useCursor();
 
-  const cursorContent = (
-    <div className="flex bg-primary h-[150px] w-[150px] justify-center items-center rounded-[50%]">
-      <p className="underline font-bold text-xl">VIEW</p>
-    </div>
-  );
+  const cursorContent = <p className="underline font-bold text-xl">VIEW</p>;
 
   const containerVariants: Variants = {
-    initial: { scale: 1, zIndex: 0 },
-    hover: {
-      scale: 1.1,
-      zIndex: 10,
-      transition: {},
-    },
+    initial: {},
+    hover: {},
   };
 
   const titleVariants: Variants = {
@@ -39,15 +30,6 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
       transition: {
         duration: 0.7,
       },
-    },
-  };
-
-  const imageVariants: Variants = {
-    initial: {
-      filter: "grayscale(1)",
-    },
-    hover: {
-      filter: "grayscale(0)",
     },
   };
 
@@ -70,7 +52,6 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
         onMouseLeave={handleMouseLeave}
       >
         <m.img
-          variants={imageVariants}
           src={project.image}
           alt={project.name}
           className="w-full aspect-square object-cover object-left rounded-2xl"

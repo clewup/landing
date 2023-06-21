@@ -39,8 +39,8 @@ const Header = () => {
       href: "#",
     },
     {
-      label: "projects",
-      href: "#projects",
+      label: "works",
+      href: "#works",
     },
     {
       label: "summary",
@@ -84,7 +84,7 @@ const Header = () => {
             onMouseLeave={handleMouseLeave}
             onClick={() => router.push(headerLink.href)}
             key={index}
-            className="rounded-2xl border-[1px] border-white px-3 uppercase text-center"
+            className="rounded-full bg-base-light border-[1px] border-white px-3 uppercase text-center"
           >
             {headerLink.label}
           </div>
