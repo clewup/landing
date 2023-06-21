@@ -8,7 +8,7 @@ import {
   Code as CodeIcon,
   User as UserIcon,
 } from "react-feather";
-import { motion as m } from "framer-motion";
+import { motion as m, Variants } from "framer-motion";
 
 const Header = () => {
   const { setCursor } = useCursor();
@@ -22,7 +22,7 @@ const Header = () => {
     setCursor("default");
   }
 
-  const variants = {
+  const variants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -30,6 +30,16 @@ const Header = () => {
         duration: 1,
         delay: 1,
       },
+    },
+  };
+
+  const logoVariants: Variants = {
+    initial: {
+      rotate: 0,
+    },
+    animate: {
+      rotate: 360,
+      transition: { ease: "linear", duration: 20, repeat: Infinity },
     },
   };
 
@@ -54,22 +64,40 @@ const Header = () => {
         href="/"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        className="flex gap-5"
       >
-        <m.p
-          className="text-2xl font-bold"
-          layoutId="logo"
-          transition={{ duration: 0.7 }}
-        >
-          LEWIS J
-        </m.p>
-        <m.p
+        <m.div
+          className="w-14"
           variants={variants}
           initial="hidden"
           animate="visible"
-          className="text-xl font-bold text-primary"
         >
-          PFOLIO-23
-        </m.p>
+          <m.img
+            variants={logoVariants}
+            initial="initial"
+            animate="animate"
+            src="https://res.cloudinary.com/dliog6kq6/image/upload/v1684696514/xqlrb2zgkwc77a53zbyr.png"
+            alt="logo"
+            className="rounded-[50%] border-[1px]"
+          />
+        </m.div>
+        <div>
+          <m.p
+            className="text-2xl font-bold"
+            layoutId="logo"
+            transition={{ duration: 0.7 }}
+          >
+            LEWIS J
+          </m.p>
+          <m.p
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-xl font-bold text-primary"
+          >
+            PFOLIO-23
+          </m.p>
+        </div>
       </Link>
 
       <m.div
