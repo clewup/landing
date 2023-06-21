@@ -16,14 +16,15 @@ const Summary = () => {
       <div className="flex flex-col items-center justify-center gap-10 md:w-1/2">
         <h1 className="text-6xl font-bold">REACH OUT</h1>
 
-        <button
+        <a
+          href="mailto:hello@clewup.co.uk"
           className="rounded-full bg-base-light px-6 py-3 text-2xl border-[1px] border-white flex gap-2 items-center"
           onMouseEnter={() => setCursor("link")}
           onMouseLeave={() => setCursor("default")}
         >
           hello@clewup.co.uk
           <SendIcon className="text-primary" />
-        </button>
+        </a>
       </div>
       <div className="flex flex-col gap-10 md:w-1/2 md:gap-20">
         <KeyArea
