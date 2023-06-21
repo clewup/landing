@@ -29,6 +29,10 @@ const Introduction = () => {
     },
   };
 
+  const cursorContent = (
+    <p className="font-bold text-xl underline">FULL-STACK</p>
+  );
+
   return (
     <m.section variants={containerVariants} initial="hidden" animate="visible">
       <div
@@ -36,22 +40,15 @@ const Introduction = () => {
         ref={ref}
       >
         <div>
-          <div
-            className="ml-20"
-            style={{
-              opacity: isInView ? 1 : 0,
-              transform: isInView ? "none" : "translateX(-5%)",
-              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0s",
-            }}
-          >
-            <StaggeredLetters className=" text-9xl text-gray-300" delay={0.5}>
+          <div className="ml-20">
+            <StaggeredLetters className="text-9xl" delay={0.5}>
               I&apos;m Lewis, a
             </StaggeredLetters>
           </div>
 
           <Marquee speed={200} delay={0.5}>
             <span
-              onMouseEnter={() => setCursor("blur")}
+              onMouseEnter={() => setCursor("expand", cursorContent)}
               onMouseLeave={() => setCursor("default")}
             >
               <StaggeredLetters
@@ -63,22 +60,15 @@ const Introduction = () => {
             </span>
           </Marquee>
 
-          <div
-            className="flex justify-end w-screen -ml-20"
-            style={{
-              opacity: isInView ? 1 : 0,
-              transform: isInView ? "none" : "translateX(10%)",
-              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0s",
-            }}
-          >
-            <StaggeredLetters className="text-9xl text-gray-300" delay={0.5}>
+          <div className="flex justify-end w-screen -ml-20">
+            <StaggeredLetters className="text-9xl" delay={0.5}>
               based in England.
             </StaggeredLetters>
           </div>
         </div>
       </div>
 
-      <div className="flex w-full gap-20 px-5 items-start">
+      <div className="flex w-full gap-20 px-20 items-start">
         <div className="w-full py-[50%]">
           <ul>
             {processes.map((process, index) => (
