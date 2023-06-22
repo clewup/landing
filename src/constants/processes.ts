@@ -1,9 +1,7 @@
-import {
-  CaptivatingExperiences,
-  Collaboration,
-  ComplexProblems,
-  Maintenance,
-} from "@/components/ListCard/ListCard";
+import CaptivatingExperiences from "@/components/ListCard/variants/CaptivatingExperiences";
+import Collaboration from "@/components/ListCard/variants/Collaboration";
+import ComplexProblems from "@/components/ListCard/variants/ComplexProblems";
+import Maintenance from "@/components/ListCard/variants/Maintenance";
 import { ProcessType } from "@/types/processTypes";
 
 const processes: ProcessType[] = [

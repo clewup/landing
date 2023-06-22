@@ -30,36 +30,4 @@ const ListCard: FC<BaseListCardProps> = ({ gradient, children, id }) => {
   );
 };
 
-export const ComplexProblems: FC<ListCardProps> = ({ id }) => {
-  return (
-    <ListCard gradient="from-[#FFB52E] to-[#ff7940]" id={id}>
-      <></>
-    </ListCard>
-  );
-};
-
-export const CaptivatingExperiences: FC<ListCardProps> = ({ id }) => {
-  return (
-    <ListCard gradient="from-[#e1c4ff] to-[#d2afff]" id={id}>
-      <></>
-    </ListCard>
-  );
-};
-
-export const Collaboration: FC<ListCardProps> = ({ id }) => {
-  return (
-    <ListCard gradient="from-[#98fb98] to-[#00ff7f]" id={id}>
-      <></>
-    </ListCard>
-  );
-};
-
-export const Maintenance: FC<ListCardProps> = ({ id }) => {
-  return (
-    <ListCard gradient="from-[#7CB9E8] to-[#007FFF]" id={id}>
-      <></>
-    </ListCard>
-  );
-};
-
 export default ListCard;

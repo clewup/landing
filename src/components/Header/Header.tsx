@@ -64,40 +64,22 @@ const Header = () => {
         href="/"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="flex gap-5"
       >
-        <m.div
-          className="w-14"
+        <m.p
+          className="text-2xl font-bold"
+          layoutId="logo"
+          transition={{ duration: 0.7 }}
+        >
+          LEWIS J
+        </m.p>
+        <m.p
           variants={variants}
           initial="hidden"
           animate="visible"
+          className="text-xl font-bold text-primary"
         >
-          <m.img
-            variants={logoVariants}
-            initial="initial"
-            animate="animate"
-            src="https://res.cloudinary.com/dliog6kq6/image/upload/v1684696514/xqlrb2zgkwc77a53zbyr.png"
-            alt="logo"
-            className="rounded-[50%] border-[1px]"
-          />
-        </m.div>
-        <div>
-          <m.p
-            className="text-2xl font-bold"
-            layoutId="logo"
-            transition={{ duration: 0.7 }}
-          >
-            LEWIS J
-          </m.p>
-          <m.p
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            className="text-xl font-bold text-primary"
-          >
-            PFOLIO-23
-          </m.p>
-        </div>
+          PFOLIO-23
+        </m.p>
       </Link>
 
       <m.div
