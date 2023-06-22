@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontSize: {
         "10xl": "11rem",
-        "11xl": "25rem",
+        "11xl": "20rem",
       },
       height: {
         "screen-header": "85vh",

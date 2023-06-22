@@ -11,40 +11,42 @@ const Summary = () => {
   return (
     <section
       id="summary"
-      className="min-h-screen flex gap-20 flex-col py-20 px-5 justify-end md:px-0 md:items-center md:flex-row"
+      className="min-h-screen flex items-center py-20 md:py-0"
     >
-      <div className="flex flex-col items-center justify-center gap-10 md:w-1/2">
-        <h1 className="text-6xl font-bold">REACH OUT</h1>
+      <div className="flex flex-col gap-20 px-5 md:px-20 w-full md:flex-row">
+        <div className="flex flex-col gap-5 md:w-1/3 md:gap-10">
+          <h1 className="text-3xl font-bold">✷ REACH OUT</h1>
 
-        <a
-          href="mailto:hello@clewup.co.uk"
-          className="rounded-full bg-base-light px-6 py-3 text-2xl border-[1px] border-white flex gap-2 items-center"
-          onMouseEnter={() => setCursor("link")}
-          onMouseLeave={() => setCursor("default")}
-        >
-          hello@clewup.co.uk
-          <SendIcon className="text-primary" />
-        </a>
-      </div>
-      <div className="flex flex-col gap-10 md:w-1/2 md:gap-20">
-        <KeyArea
-          area="SERVICES"
-          skills={["UI/UX DEVELOPMENT", "API DEVELOPMENT", "CLOUD COMPUTING"]}
-        />
-        <KeyArea
-          area="FRAMEWORKS/LIBRARIES"
-          skills={[
-            "REACT.JS",
-            "NEXT.JS",
-            ".NET",
-            "NEST.JS",
-            "NODE.JS",
-            "TAILWIND",
-            "FRAMER",
-          ]}
-        />
-        <KeyArea area="LANGUAGES" skills={["TYPESCRIPT", "C#", "SASS"]} />
-        <KeyArea area="DATABASES" skills={["MSSQL", "POSTGRES", "MONGODB"]} />
+          <a
+            href="mailto:hello@clewup.co.uk"
+            className="underline text-2xl flex gap-2 items-center"
+            onMouseEnter={() => setCursor("link")}
+            onMouseLeave={() => setCursor("default")}
+          >
+            hello@clewup.co.uk
+            <SendIcon className="text-primary" size={20} />
+          </a>
+        </div>
+        <div className="flex flex-col gap-10 md:w-2/3">
+          <KeyArea
+            area="SERVICES"
+            skills={["UI/UX design", "API development", "Cloud computing"]}
+          />
+          <KeyArea
+            area="FRAMEWORKS/LIBRARIES"
+            skills={[
+              "React.js",
+              "Next.js",
+              ".NET",
+              "Nest.js",
+              "Node.js",
+              "Tailwind",
+              "Framer",
+            ]}
+          />
+          <KeyArea area="LANGUAGES" skills={["TypeScript", "C#", "Sass"]} />
+          <KeyArea area="DATABASES" skills={["MsSQL", "Postgres", "MongoDB"]} />
+        </div>
       </div>
     </section>
   );

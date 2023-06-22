@@ -59,29 +59,7 @@ const Header = () => {
   ];
 
   return (
-    <m.div className="fixed h-[15vh] w-screen flex justify-between p-5 z-40">
-      <Link
-        href="/"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <m.p
-          className="text-2xl font-bold"
-          layoutId="logo"
-          transition={{ duration: 0.7 }}
-        >
-          LEWIS J
-        </m.p>
-        <m.p
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          className="text-xl font-bold text-primary"
-        >
-          PFOLIO-23
-        </m.p>
-      </Link>
-
+    <m.div className="fixed h-[15vh] w-screen flex justify-end p-5 z-40">
       <m.div
         variants={variants}
         initial="hidden"

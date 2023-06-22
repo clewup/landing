@@ -51,12 +51,15 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
   };
 
   const logoVariants: Variants = {
-    hidden: { x: 0 },
+    hidden: { opacity: 1 },
     visible: {
-      x: 0,
+      opacity: 1,
       transition: {
         duration: 3,
       },
+    },
+    exit: {
+      opacity: 0,
     },
   };
 
@@ -90,19 +93,13 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
       <div className="absolute right-10 top-10 overflow-hidden  ">
         <m.p
           variants={percentageVariants}
-          className="text-3xl mix-blend-difference"
+          className="text-6xl font-bold mix-blend-difference"
         >
           {percentage}%
         </m.p>
       </div>
-      <div className="font-bold flex flex-col h-full justify-end">
-        <m.p
-          variants={logoVariants}
-          layoutId="logo"
-          className="text-8xl mix-blend-difference md:text-11xl md:leading-[20rem]"
-        >
-          LEWIS J
-        </m.p>
+      <div className="flex flex-col h-full justify-end mix-blend-difference">
+        <m.span variants={logoVariants}></m.span>
       </div>
     </m.div>
   );
