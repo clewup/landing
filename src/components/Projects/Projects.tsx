@@ -21,7 +21,7 @@ const Projects = () => {
     >
       <h1 className="text-3xl font-bold">✺ WORKS</h1>
 
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-20">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-5">
         <Project project={projects[0]} />
         <Project project={projects[1]} />
         <Project project={projects[2]} />
