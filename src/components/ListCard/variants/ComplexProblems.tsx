@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const ComplexProblems: FC<ListCardProps> = ({ id }) => {
   return (
-    <ListCard gradient="from-[#FFB52E] to-[#ff7940]" id={id}>
+    <ListCard backgroundColor="bg-primary" id={id}>
       <></>
     </ListCard>
   );

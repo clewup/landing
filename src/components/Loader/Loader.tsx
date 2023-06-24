@@ -93,7 +93,7 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
       <div className="absolute right-10 top-10 overflow-hidden  ">
         <m.p
           variants={percentageVariants}
-          className="text-6xl font-bold mix-blend-difference"
+          className="text-9xl font-bold mix-blend-difference font-drukCond"
         >
           {percentage}%
         </m.p>

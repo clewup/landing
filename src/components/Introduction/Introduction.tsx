@@ -22,19 +22,25 @@ const Introduction = () => {
     <m.section variants={containerVariants} initial="hidden" animate="visible">
       <div className="flex items-center min-h-screen w-screen overflow-x-hidden">
         <div className="px-5">
-          <StaggeredLetters className="text-5xl md:text-9xl" delay={0.5}>
-            I&apos;m Lewis, a
+          <StaggeredLetters
+            className="text-7xl md:text-11xl md:leading-[16rem] font-drukCond"
+            delay={0.5}
+          >
+            I&apos;M LEWIS, A
           </StaggeredLetters>
 
           <StaggeredLetters
-            className="text-7xl font-bold md:text-10xl md:leading-[9rem]"
+            className="text-7xl font-bold md:text-11xl md:leading-[16rem] font-drukCond text-primary"
             delay={0.5}
           >
-            creative developer
+            CREATIVE DEVELOPER
           </StaggeredLetters>
 
-          <StaggeredLetters className="text-5xl md:text-9xl" delay={0.5}>
-            based in England.
+          <StaggeredLetters
+            className="text-7xl md:text-11xl md:leading-[16rem] font-drukCond"
+            delay={0.5}
+          >
+            BASED IN ENGLAND.
           </StaggeredLetters>
         </div>
       </div>
@@ -51,7 +57,9 @@ const Introduction = () => {
         </div>
         <div className="w-full sticky top-0 h-screen flex-col gap-20 items-center justify-center hidden md:flex">
           <div className="w-2/3">
-            <h1 className="text-3xl font-bold">✦ HOW I CAN HELP</h1>
+            <h1 className="text-7xl font-bold font-drukCond">
+              ✦ HOW I CAN HELP
+            </h1>
           </div>
 
           <div className="relative w-2/3 aspect-square rounded-2xl bg-base-light">

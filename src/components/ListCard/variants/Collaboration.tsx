@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const Collaboration: FC<ListCardProps> = ({ id }) => {
   return (
-    <ListCard gradient="from-[#98fb98] to-[#00ff7f]" id={id}>
+    <ListCard backgroundColor="bg-[#bfff00]" id={id}>
       <></>
     </ListCard>
   );

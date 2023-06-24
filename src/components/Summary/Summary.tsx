@@ -15,7 +15,7 @@ const Summary = () => {
     >
       <div className="flex flex-col gap-20 px-5 md:px-20 w-full md:flex-row">
         <div className="flex flex-col gap-5 md:w-1/3 md:gap-10">
-          <h1 className="text-3xl font-bold">✷ REACH OUT</h1>
+          <h1 className="text-7xl font-bold font-drukCond">✷ REACH OUT</h1>
 
           <a
             href="mailto:hello@clewup.co.uk"

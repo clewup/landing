@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const Maintenance: FC<ListCardProps> = ({ id }) => {
   return (
-    <ListCard gradient="from-[#7CB9E8] to-[#007FFF]" id={id}>
+    <ListCard backgroundColor="bg-[#35a2ff]" id={id}>
       <></>
     </ListCard>
   );

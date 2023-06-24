@@ -6,7 +6,7 @@ import cx from "classnames";
 
 interface BaseListCardProps {
   children: ReactNode;
-  gradient: string;
+  backgroundColor: string;
   id: string;
 }
 
@@ -14,14 +14,14 @@ export interface ListCardProps {
   id: string;
 }
 
-const ListCard: FC<BaseListCardProps> = ({ gradient, children, id }) => {
+const ListCard: FC<BaseListCardProps> = ({ backgroundColor, children, id }) => {
   const inViewListItem = useListStore((store) => store.inViewListItem);
 
   return (
     <div
       className={cx(
-        "absolute inset-0 rounded-2xl bg-gradient-to-br transition-opacity",
-        gradient,
+        "absolute inset-0 rounded-2xl transition-opacity",
+        backgroundColor,
         inViewListItem === id ? "opacity-100" : "opacity-0"
       )}
     >

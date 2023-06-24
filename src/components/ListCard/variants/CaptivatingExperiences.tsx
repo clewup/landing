@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const CaptivatingExperiences: FC<ListCardProps> = ({ id }) => {
   return (
-    <ListCard gradient="from-[#e1c4ff] to-[#d2afff]" id={id}>
+    <ListCard backgroundColor="bg-[#671ce6]" id={id}>
       <></>
     </ListCard>
   );

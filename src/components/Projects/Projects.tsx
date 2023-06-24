@@ -19,7 +19,7 @@ const Projects = () => {
       id="works"
       className="min-h-screen flex flex-col justify-center px-5 gap-20 md:px-20"
     >
-      <h1 className="text-3xl font-bold">✺ WORKS</h1>
+      <h1 className="text-7xl font-bold font-drukCond">✺ WORKS</h1>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-5">
         <Project project={projects[0]} />

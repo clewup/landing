@@ -28,3 +28,11 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+@font-face {
+  font-family: 'Druk Cond';
+  src: url('/fonts/DrukCond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
