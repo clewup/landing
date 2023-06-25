@@ -15,17 +15,22 @@ const Summary = () => {
     >
       <div className="flex flex-col gap-20 px-5 md:px-20 w-full md:flex-row">
         <div className="flex flex-col gap-5 md:w-1/3 md:gap-10">
-          <h1 className="text-7xl font-bold font-drukCond">✷ REACH OUT</h1>
+          <span className="text-7xl font-bold font-drukCond flex gap-2">
+            <h1 className="text-primary">✷</h1>
+            <h1>REACH OUT</h1>
+          </span>
 
-          <a
-            href="mailto:hello@clewup.co.uk"
-            className="underline text-2xl flex gap-2 items-center"
-            onMouseEnter={() => setCursor("link")}
-            onMouseLeave={() => setCursor("default")}
-          >
-            hello@clewup.co.uk
-            <SendIcon className="text-primary" size={20} />
-          </a>
+          <span className="flex gap-2 text-2xl items-center">
+            <p>Email:</p>
+            <a
+              href="mailto:hello@clewup.co.uk"
+              className="underline"
+              onMouseEnter={() => setCursor("link")}
+              onMouseLeave={() => setCursor("default")}
+            >
+              hello@clewup.co.uk
+            </a>
+          </span>
         </div>
         <div className="flex flex-col gap-10 md:w-2/3">
           <KeyArea
