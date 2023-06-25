@@ -5,6 +5,7 @@ import { ProjectType } from "@/types/projectTypes";
 import Link from "next/link";
 import React, { FC } from "react";
 import { motion as m, Variants } from "framer-motion";
+import cx from "classnames";
 
 interface ProjectProps {
   project: ProjectType;
@@ -33,28 +34,23 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
     },
   };
 
-  function handleMouseEnter() {
-    setCursor("expand", cursorContent);
-  }
-
-  function handleMouseLeave() {
-    setCursor("default");
-  }
-
   return (
     <Link href={project.website} target="_blank" className={className}>
       <m.div
         variants={containerVariants}
         initial="initial"
         whileHover="hover"
-        className="relative flex flex-col gap-10 w-full h-full"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        className="relative flex flex-col gap-10 w-full h-full overflow-y-hidden"
+        onMouseEnter={() => setCursor("expand", cursorContent)}
+        onMouseLeave={() => setCursor("default")}
       >
         <m.img
           src={project.image}
           alt={project.name}
-          className="w-full rounded-xl"
+          className={cx(
+            "w-full rounded-xl aspect-square object-cover",
+            project.background
+          )}
         />
         <m.p
           variants={titleVariants}

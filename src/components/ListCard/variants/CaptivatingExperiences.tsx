@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const CaptivatingExperiences: FC<ListCardProps> = ({ id }) => {
   return (
-    <ListCard backgroundColor="bg-[#671ce6]" id={id}>
+    <ListCard backgroundColor="bg-primary" id={id}>
       <></>
     </ListCard>
   );

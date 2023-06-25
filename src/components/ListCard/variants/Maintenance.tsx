@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const Maintenance: FC<ListCardProps> = ({ id }) => {
   return (
-    <ListCard backgroundColor="bg-[#35a2ff]" id={id}>
+    <ListCard backgroundColor="bg-primary" id={id}>
       <></>
     </ListCard>
   );

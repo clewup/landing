@@ -2,10 +2,9 @@
 
 import Project from "@/components/Project/Project";
 import projects from "@/constants/projects";
-import useParallax from "@/lib/framer/hooks/useParallax/useParallax";
 import useSectionStore from "@/lib/zustand/hooks/useSectionStore/useSectionStore";
 import React, { useEffect, useRef } from "react";
-import { motion as m, useInView, useScroll } from "framer-motion";
+import { useInView } from "framer-motion";
 
 const Works = () => {
   const { setInViewSection } = useSectionStore();

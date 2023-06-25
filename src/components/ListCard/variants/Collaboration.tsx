@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const Collaboration: FC<ListCardProps> = ({ id }) => {
   return (
-    <ListCard backgroundColor="bg-[#bfff00]" id={id}>
+    <ListCard backgroundColor="bg-primary" id={id}>
       <></>
     </ListCard>
   );

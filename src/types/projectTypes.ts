@@ -4,4 +4,5 @@ export type ProjectType = {
   category: "web application" | "mobile application" | "ui/ux design";
   image: string;
   website: string;
+  background: string;
 };
