@@ -58,7 +58,7 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
         />
         <m.p
           variants={titleVariants}
-          className="text-xl uppercase font-bold -mt-10"
+          className="font-drukWide text-xl uppercase font-bold -mt-8"
         >
           {project.name} / {project.category}
         </m.p>

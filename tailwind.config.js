@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
         drukCond: ["Druk Cond", "sans"],
+        drukWide: ["Druk Wide", "sans"],
       },
       colors: {
         primary: "#ff4d01",

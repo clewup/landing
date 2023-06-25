@@ -2,32 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-#__next {
-  @apply min-h-full;
-}
-
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
 }
 
-.stroke-text {
+.text-stroke {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
 }
 
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
 
 @font-face {
   font-family: 'Druk Cond';
   src: url('/fonts/DrukCond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Druk Wide';
+  src: url('/fonts/DrukWide.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

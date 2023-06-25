@@ -57,10 +57,7 @@ const Introduction = () => {
         </div>
         <div className="w-full sticky top-0 h-screen flex-col gap-20 items-center justify-center hidden md:flex">
           <div className="w-2/3">
-            <span className="text-7xl font-bold font-drukCond flex gap-2">
-              <h1 className="text-primary">✦</h1>
-              <h1>HOW I CAN HELP</h1>
-            </span>
+            <h1 className="text-9xl font-bold font-drukCond">HOW I CAN HELP</h1>
           </div>
 
           <div className="relative w-2/3 aspect-square rounded-2xl bg-base-light">

@@ -4,6 +4,7 @@ import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { FC, useState } from "react";
 import { Send } from "react-feather";
 import * as Yup from "yup";
+import { motion as m } from "framer-motion";
 
 interface ContactFormValues {
   name: string;
@@ -48,6 +49,11 @@ const ContactForm: FC = () => {
       .typeError("Message must be a string")
       .required("Message is required"),
   });
+
+  const buttonVariants = {
+    initial: { scale: 1, rotate: 0 },
+    hover: { scale: 1.02, rotate: -1 },
+  };
 
   async function onSubmit(
     formValues: ContactFormValues,
@@ -116,13 +122,16 @@ const ContactForm: FC = () => {
               {(error: string) => <p className="text-red-500">{error}</p>}
             </ErrorMessage>
 
-            <button
+            <m.button
+              variants={buttonVariants}
+              initial="initial"
+              whileHover="hover"
               className="rounded-full bg-primary py-3 mt-10 flex items-center gap-2 justify-center text-lg font-bold"
               disabled={isLoading}
             >
               <p>SEND</p>
               <Send size={18} />
-            </button>
+            </m.button>
           </Form>
         );
       }}
