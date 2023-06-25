@@ -24,7 +24,7 @@ const processes: ProcessType[] = [
   },
   {
     id: "maintenance",
-    text: "Offering a holistic software maintenance solution to ensure ongoing alignment with customer requirements.",
+    text: "Offering holistic software maintenance to ensure ongoing alignment with adapting customer requirements.",
     card: Maintenance,
   },
 ];
