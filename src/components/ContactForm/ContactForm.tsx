@@ -1,6 +1,5 @@
 "use client";
 
-import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { FC, useState } from "react";
 import { Send } from "react-feather";
@@ -14,8 +13,6 @@ interface ContactFormValues {
 }
 
 const ContactForm: FC = () => {
-  const { setCursor } = useCursor();
-
   const [isLoading, setLoading] = useState(false);
 
   const initialValues: ContactFormValues = {
@@ -121,8 +118,6 @@ const ContactForm: FC = () => {
 
             <button
               className="rounded-full bg-primary py-3 mt-10 flex items-center gap-2 justify-center text-lg font-bold"
-              onMouseEnter={() => setCursor("link")}
-              onMouseLeave={() => setCursor("default")}
               disabled={isLoading}
             >
               <p>SEND</p>

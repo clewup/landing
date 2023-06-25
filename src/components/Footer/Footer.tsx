@@ -1,25 +1,14 @@
 "use client";
 
 import metadata from "@/constants/metadata";
-import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import {
   SiTwitter as TwitterIcon,
   SiGithub as GitHubIcon,
 } from "@icons-pack/react-simple-icons";
-import { Suspense, useEffect, useState } from "react";
+import Link from "next/link";
 import Clock from "react-live-clock";
 
 const Footer = () => {
-  const { setCursor } = useCursor();
-
-  function handleMouseEnter() {
-    setCursor("link");
-  }
-
-  function handleMouseLeave() {
-    setCursor("default");
-  }
-
   return (
     <div className="flex items-center justify-between py-5 px-5 bg-base-light md:px-10">
       <span className="flex gap-2 flex-col md:flex-row md:gap-5">
@@ -32,32 +21,17 @@ const Footer = () => {
         />
       </span>
       <span className="flex gap-5 flex-col md:flex-row md:items-center">
-        <a
-          href="mailto:lewis@clewup.co.uk"
-          className="text-lg"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
+        <Link href="mailto:lewis@clewup.co.uk" className="text-lg">
           {metadata.email}
-        </a>
+        </Link>
 
         <div className="flex gap-2 flex-row">
-          <a
-            target="_blank"
-            href={metadata.socials.twitter}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
+          <Link target="_blank" href={metadata.socials.twitter}>
             <TwitterIcon className="cursor-pointer" height={20} />
-          </a>
-          <a
-            target="_blank"
-            href={metadata.socials.github}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
+          </Link>
+          <Link target="_blank" href={metadata.socials.github}>
             <GitHubIcon className="cursor-pointer" height={20} />
-          </a>
+          </Link>
         </div>
       </span>
     </div>

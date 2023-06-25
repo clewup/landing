@@ -14,7 +14,6 @@ const Cursor = () => {
       y: mousePos.y - 16,
       height: 32,
       width: 32,
-      backgroundColor: "#FFFFFF",
     },
 
     expand: {
@@ -32,23 +31,6 @@ const Cursor = () => {
       height: 75,
       backgroundColor: "#FFFFFF",
       mixBlendMode: "difference",
-    },
-
-    link: {
-      x: mousePos.x - 16,
-      y: mousePos.y - 16,
-      width: 32,
-      height: 32,
-      border: "2px solid",
-      borderColor: "#ff4d01",
-    },
-
-    blur: {
-      x: mousePos.x - 64,
-      y: mousePos.y - 64,
-      width: 128,
-      height: 128,
-      backdropFilter: "blur(5px)",
     },
   };
 

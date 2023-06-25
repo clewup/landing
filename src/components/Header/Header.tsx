@@ -1,27 +1,9 @@
 "use client";
 
-import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import {
-  Monitor as MonitorIcon,
-  Code as CodeIcon,
-  User as UserIcon,
-} from "react-feather";
 import { motion as m, Variants } from "framer-motion";
 
 const Header = () => {
-  const { setCursor } = useCursor();
-  const router = useRouter();
-
-  function handleMouseEnter() {
-    setCursor("link");
-  }
-
-  function handleMouseLeave() {
-    setCursor("default");
-  }
-
   const variants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,16 +12,6 @@ const Header = () => {
         duration: 1,
         delay: 1,
       },
-    },
-  };
-
-  const logoVariants: Variants = {
-    initial: {
-      rotate: 0,
-    },
-    animate: {
-      rotate: 360,
-      transition: { ease: "linear", duration: 20, repeat: Infinity },
     },
   };
 
@@ -67,15 +39,13 @@ const Header = () => {
         className="flex flex-col gap-3"
       >
         {headerLinks.map((headerLink, index) => (
-          <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => router.push(headerLink.href)}
+          <Link
+            href={headerLink.href}
             key={index}
             className="rounded-full bg-base-light border-[1px] border-white px-3 uppercase text-center"
           >
             {headerLink.label}
-          </div>
+          </Link>
         ))}
       </m.div>
     </m.div>
