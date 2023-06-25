@@ -1,7 +1,7 @@
 import Introduction from "@/components/Introduction/Introduction";
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import Projects from "@/components/Projects/Projects";
-import Summary from "@/components/Summary/Summary";
+import Contact from "@/components/Contact/Contact";
 import React from "react";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <PageWrapper className="flex flex-col">
       <Introduction />
       <Projects />
-      <Summary />
+      <Contact />
     </PageWrapper>
   );
 }

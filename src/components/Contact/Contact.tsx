@@ -2,18 +2,16 @@
 
 import ContactForm from "@/components/ContactForm/ContactForm";
 import SummaryArea from "@/components/SummaryArea/SummaryArea";
-import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import React from "react";
-import { Send as SendIcon } from "react-feather";
 
-const Summary = () => {
+const Contact = () => {
   return (
     <section
       id="summary"
       className="min-h-screen flex items-center py-20 md:py-0"
     >
       <div className="flex flex-col gap-20 px-5 md:px-20 w-full md:flex-row">
-        <div className="flex flex-col gap-5 md:w-1/3 md:gap-10">
+        <div className="flex flex-col gap-5 md:w-1/3 md:gap-10 bg-base-light p-5 rounded-xl">
           <span className="text-7xl font-bold font-drukCond flex gap-2">
             <h1 className="text-primary">✷</h1>
             <h1>REACH OUT</h1>
@@ -21,7 +19,7 @@ const Summary = () => {
 
           <ContactForm />
         </div>
-        <div className="flex flex-col gap-10 md:w-2/3">
+        <div className="flex flex-col gap-10 md:w-2/3 p-5">
           <SummaryArea
             area="SERVICES"
             skills={["UI/UX design", "API development", "Cloud computing"]}
@@ -49,4 +47,4 @@ const Summary = () => {
   );
 };
 
-export default Summary;
+export default Contact;
