@@ -3,21 +3,24 @@
 import Project from "@/components/Project/Project";
 import projects from "@/constants/projects";
 import useParallax from "@/lib/framer/hooks/useParallax/useParallax";
-import React, { useRef } from "react";
-import { motion as m, useScroll } from "framer-motion";
+import useSectionStore from "@/lib/zustand/hooks/useSectionStore/useSectionStore";
+import React, { useEffect, useRef } from "react";
+import { motion as m, useInView, useScroll } from "framer-motion";
 
-const Projects = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end end"],
-  });
-  const y = useParallax(scrollYProgress, 500);
+const Works = () => {
+  const { setInViewSection } = useSectionStore();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { margin: "-10% 0px -10% 0px" });
+
+  useEffect(() => {
+    if (isInView) setInViewSection("works");
+  }, [isInView]);
 
   return (
     <section
       id="works"
       className="min-h-screen flex flex-col justify-center px-5 gap-20 md:px-20"
+      ref={sectionRef}
     >
       <h1 className="text-9xl font-bold font-drukCond">WORKS</h1>
 
@@ -30,4 +33,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Works;

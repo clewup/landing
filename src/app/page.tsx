@@ -1,14 +1,14 @@
-import Introduction from "@/components/Introduction/Introduction";
+import Me from "@/sections/Me/Me";
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
-import Projects from "@/components/Projects/Projects";
-import Contact from "@/components/Contact/Contact";
+import Works from "@/sections/Works/Works";
+import Contact from "@/sections/Contact/Contact";
 import React from "react";
 
 export default function Home() {
   return (
     <PageWrapper className="flex flex-col">
-      <Introduction />
-      <Projects />
+      <Me />
+      <Works />
       <Contact />
     </PageWrapper>
   );

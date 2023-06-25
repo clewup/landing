@@ -3,11 +3,20 @@
 import ListItem from "@/components/ListItem/ListItem";
 import processes from "@/constants/processes";
 import StaggeredLetters from "@/lib/framer/components/StaggeredLetters/StaggeredLetters";
+import useSectionStore from "@/lib/zustand/hooks/useSectionStore/useSectionStore";
 
-import { motion as m, Variants } from "framer-motion";
-import React from "react";
+import { motion as m, useInView, Variants } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
-const Introduction = () => {
+const Me = () => {
+  const { setInViewSection } = useSectionStore();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { margin: "-10% 0px -10% 0px" });
+
+  useEffect(() => {
+    if (isInView) setInViewSection("me");
+  }, [isInView]);
+
   const containerVariants: Variants = {
     hidden: {},
     visible: {
@@ -19,7 +28,12 @@ const Introduction = () => {
   };
 
   return (
-    <m.section variants={containerVariants} initial="hidden" animate="visible">
+    <m.section
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      ref={sectionRef}
+    >
       <div className="flex items-center min-h-screen w-screen overflow-x-hidden">
         <div className="px-5">
           <StaggeredLetters
@@ -71,4 +85,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default Me;

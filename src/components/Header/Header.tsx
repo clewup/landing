@@ -1,9 +1,13 @@
 "use client";
 
+import useSectionStore from "@/lib/zustand/hooks/useSectionStore/useSectionStore";
 import Link from "next/link";
 import { motion as m, Variants } from "framer-motion";
+import cx from "classnames";
 
 const Header = () => {
+  const { inViewSection } = useSectionStore();
+
   const variants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,8 +29,8 @@ const Header = () => {
       href: "#works",
     },
     {
-      label: "summary",
-      href: "#summary",
+      label: "contact",
+      href: "#contact",
     },
   ];
 
@@ -40,9 +44,14 @@ const Header = () => {
       >
         {headerLinks.map((headerLink, index) => (
           <Link
-            href={headerLink.href}
             key={index}
-            className="rounded-full bg-base-light border-[1px] border-white px-3 uppercase text-center"
+            href={headerLink.href}
+            className={cx(
+              "rounded-full bg-base-light font-drukWide border-[2px] px-3 uppercase text-center",
+              inViewSection === headerLink.label
+                ? "border-primary"
+                : "border-white"
+            )}
           >
             {headerLink.label}
           </Link>
