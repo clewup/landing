@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 
-interface KeyAreaProps {
+interface SummaryAreaProps {
   area: string;
   skills: string[];
 }
 
-const KeyArea: FC<KeyAreaProps> = ({ area, skills }) => {
+const SummaryArea: FC<SummaryAreaProps> = ({ area, skills }) => {
   return (
     <div className="flex flex-col md:flex-row md:gap-20 md:justify-between border-b-[1px] border-base-light pb-10 last:border-b-0">
       <h2 className="text-xl font-bold md:w-1/2">{area}</h2>
@@ -18,4 +18,4 @@ const KeyArea: FC<KeyAreaProps> = ({ area, skills }) => {
   );
 };
 
-export default KeyArea;
+export default SummaryArea;

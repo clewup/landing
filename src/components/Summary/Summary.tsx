@@ -1,13 +1,12 @@
 "use client";
 
-import KeyArea from "@/components/KeyArea/KeyArea";
+import ContactForm from "@/components/ContactForm/ContactForm";
+import SummaryArea from "@/components/SummaryArea/SummaryArea";
 import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import React from "react";
 import { Send as SendIcon } from "react-feather";
 
 const Summary = () => {
-  const { setCursor } = useCursor();
-
   return (
     <section
       id="summary"
@@ -20,24 +19,14 @@ const Summary = () => {
             <h1>REACH OUT</h1>
           </span>
 
-          <span className="flex gap-2 text-2xl items-center">
-            <p>Email:</p>
-            <a
-              href="mailto:hello@clewup.co.uk"
-              className="underline"
-              onMouseEnter={() => setCursor("link")}
-              onMouseLeave={() => setCursor("default")}
-            >
-              hello@clewup.co.uk
-            </a>
-          </span>
+          <ContactForm />
         </div>
         <div className="flex flex-col gap-10 md:w-2/3">
-          <KeyArea
+          <SummaryArea
             area="SERVICES"
             skills={["UI/UX design", "API development", "Cloud computing"]}
           />
-          <KeyArea
+          <SummaryArea
             area="FRAMEWORKS/LIBRARIES"
             skills={[
               "React.js",
@@ -49,8 +38,11 @@ const Summary = () => {
               "Framer",
             ]}
           />
-          <KeyArea area="LANGUAGES" skills={["TypeScript", "C#", "Sass"]} />
-          <KeyArea area="DATABASES" skills={["MsSQL", "Postgres", "MongoDB"]} />
+          <SummaryArea area="LANGUAGES" skills={["TypeScript", "C#", "Sass"]} />
+          <SummaryArea
+            area="DATABASES"
+            skills={["MsSQL", "Postgres", "MongoDB"]}
+          />
         </div>
       </div>
     </section>
