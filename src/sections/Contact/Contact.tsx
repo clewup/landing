@@ -2,8 +2,14 @@
 
 import ContactForm from "@/components/ContactForm/ContactForm";
 import SummaryArea from "@/components/SummaryArea/SummaryArea";
+import metadata from "@/constants/metadata";
 import useSectionStore from "@/lib/zustand/hooks/useSectionStore/useSectionStore";
+import {
+  SiGithub as GitHubIcon,
+  SiTwitter as TwitterIcon,
+} from "@icons-pack/react-simple-icons";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 const Contact = () => {
@@ -26,6 +32,17 @@ const Contact = () => {
           <h1 className="text-9xl font-bold font-drukCond">REACH OUT</h1>
 
           <ContactForm />
+
+          <span className="flex gap-5 justify-center">
+            <div className="flex gap-2 flex-row">
+              <Link target="_blank" href={metadata.socials.twitter}>
+                <TwitterIcon className="cursor-pointer" size={30} />
+              </Link>
+              <Link target="_blank" href={metadata.socials.github}>
+                <GitHubIcon className="cursor-pointer" size={30} />
+              </Link>
+            </div>
+          </span>
         </div>
         <div className="flex flex-col gap-10 md:w-2/3 p-5">
           <SummaryArea

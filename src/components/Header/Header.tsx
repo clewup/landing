@@ -54,7 +54,7 @@ const Header = () => {
               initial="initial"
               whileHover="hover"
               className={cx(
-                "rounded-full bg-base-light font-drukWide border-[2px] px-3 uppercase text-center",
+                "rounded-full bg-base-light font-drukWide border-[2px] px-3 uppercase text-center min-w-[150px]",
                 inViewSection === headerLink.label
                   ? "border-primary"
                   : "border-white"

@@ -21,7 +21,7 @@ const Works = () => {
       className="min-h-screen flex flex-col justify-center px-5 gap-20 md:px-20"
       ref={sectionRef}
     >
-      <h1 className="text-9xl font-bold font-drukCond">WORKS</h1>
+      <h1 className="text-9xl font-bold font-drukCond">WORKS&PROJECTS</h1>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-5">
         <Project project={projects[0]} />
