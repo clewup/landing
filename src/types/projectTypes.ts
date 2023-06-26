@@ -5,4 +5,6 @@ export type ProjectType = {
   image: string;
   website: string;
   background: string;
+  features: string[];
+  technologies: string[];
 };

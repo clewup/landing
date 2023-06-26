@@ -54,10 +54,32 @@ export default function ProjectSlug({
             {project.name}
           </h1>
           <p className="text-2xl">{project.description}</p>
+
+          <span>
+            <h1 className="font-bold text-4xl">FEATURES</h1>
+            <ul>
+              {project.features.map((technology, index) => (
+                <li key={index} className="text-xl">
+                  {technology}
+                </li>
+              ))}
+            </ul>
+          </span>
+
+          <span>
+            <h1 className="font-bold text-4xl">TECHNOLOGIES</h1>
+            <ul>
+              {project.technologies.map((technology, index) => (
+                <li key={index} className="text-xl">
+                  {technology}
+                </li>
+              ))}
+            </ul>
+          </span>
         </div>
 
         <Link href={project.website} target="_blank">
-          <h1 className="text-9xl font-bold font-drukCond underline">
+          <h1 className="text-7xl font-bold font-drukCond underline">
             VIEW DEMO
           </h1>
         </Link>
