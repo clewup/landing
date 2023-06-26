@@ -51,7 +51,6 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
             "w-full rounded-xl aspect-square object-cover",
             project.background
           )}
-          layoutId="project_image"
         />
         <m.p
           variants={titleVariants}

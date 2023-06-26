@@ -45,10 +45,6 @@ export default function ProjectSlug({
           src={project.image}
           alt={project.name}
           className={cx("h-full w-full object-cover", project.background)}
-          layoutId="project_image"
-          transition={{
-            duration: 1.5,
-          }}
         />
       </div>
 
@@ -57,7 +53,7 @@ export default function ProjectSlug({
           <h1 className="text-9xl font-bold font-drukWide uppercase">
             {project.name}
           </h1>
-          <p>{project.description}</p>
+          <p className="text-2xl">{project.description}</p>
         </div>
 
         <Link href={project.website} target="_blank">
