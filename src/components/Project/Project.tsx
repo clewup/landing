@@ -35,7 +35,7 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
   };
 
   return (
-    <Link href={project.website} target="_blank" className={className}>
+    <Link href={`/project/${project.name}`} className={className}>
       <m.div
         variants={containerVariants}
         initial="initial"
@@ -51,6 +51,7 @@ const Project: FC<ProjectProps> = ({ project, className }) => {
             "w-full rounded-xl aspect-square object-cover",
             project.background
           )}
+          layoutId="project_image"
         />
         <m.p
           variants={titleVariants}

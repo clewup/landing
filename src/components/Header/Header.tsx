@@ -4,9 +4,13 @@ import useSectionStore from "@/lib/zustand/hooks/useSectionStore/useSectionStore
 import Link from "next/link";
 import { motion as m, Variants } from "framer-motion";
 import cx from "classnames";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const { inViewSection } = useSectionStore();
+  const pathname = usePathname();
+
+  const isRendered = ["/"].includes(pathname);
 
   const variants: Variants = {
     hidden: { opacity: 0 },
@@ -40,7 +44,12 @@ const Header = () => {
   };
 
   return (
-    <m.div className="fixed h-[15vh] w-screen flex justify-end p-5 z-40">
+    <m.div
+      className={cx(
+        "fixed h-[15vh] w-screen justify-end p-5 z-40",
+        isRendered ? "flex" : "hidden"
+      )}
+    >
       <m.div
         variants={variants}
         initial="hidden"

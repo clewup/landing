@@ -2,7 +2,7 @@ import { ProjectType } from "@/types/projectTypes";
 
 const projects: ProjectType[] = [
   {
-    name: "daily blog",
+    name: "blog",
     description:
       "An intuitive, user-friendly content management system that empowers individuals to create and engage with blog posts.",
     category: "web application",
