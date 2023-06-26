@@ -40,11 +40,11 @@ export default function ProjectSlug({
         <ArrowLeftCircle size={40} />
       </Link>
 
-      <div className="w-1/2">
+      <div className={cx("w-1/2", project.background)}>
         <m.img
           src={project.image}
           alt={project.name}
-          className={cx("h-full w-full object-cover", project.background)}
+          className={cx("h-full object-contain")}
         />
       </div>
 
