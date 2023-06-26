@@ -40,17 +40,17 @@ export default function ProjectSlug({
         <ArrowLeftCircle size={40} />
       </Link>
 
-      <div className={cx("w-1/2", project.background)}>
+      <div className={cx("w-1/2 flex items-end", project.background)}>
         <m.img
           src={project.image}
           alt={project.name}
-          className={cx("h-full object-contain")}
+          className={cx("object-contain")}
         />
       </div>
 
       <div className="w-1/2 p-5 flex flex-col justify-between">
         <div className="flex flex-col gap-10">
-          <h1 className="text-9xl font-bold font-drukWide uppercase">
+          <h1 className="-translate-x-20 text-9xl font-bold font-drukWide uppercase">
             {project.name}
           </h1>
           <p className="text-2xl">{project.description}</p>
