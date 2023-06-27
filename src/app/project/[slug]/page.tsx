@@ -24,6 +24,11 @@ export default function ProjectSlug({
   const name = decodeURIComponent(params.slug);
   const project = projects.find((project) => project.name === name);
 
+  const buttonVariants = {
+    initial: { scale: 1, rotate: 0 },
+    hover: { scale: 1.02, rotate: -1 },
+  };
+
   if (!project) {
     return (
       <PageWrapper className="flex items-center justify-center">
@@ -61,10 +66,15 @@ export default function ProjectSlug({
         </div>
 
         <Link href={project.website} target="_blank">
-          <button className="text-4xl font-bold bg-primary py-3 rounded-full w-full flex items-center justify-center gap-4">
+          <m.button
+            variants={buttonVariants}
+            initial="initial"
+            whileHover="hover"
+            className="text-4xl font-bold bg-primary py-3 rounded-full w-full flex items-center justify-center gap-4"
+          >
             VIEW DEMO
             <Eye size={30} />
-          </button>
+          </m.button>
         </Link>
       </div>
     </PageWrapper>
