@@ -11,7 +11,7 @@ const projects: ProjectType[] = [
     website: "https://www.store.clewup.co.uk",
     background: "bg-[#BFFF00]",
     features: ["Ecommerce", "Stock Management", "Checkout", "Filters"],
-    technologies: ["Next.js", "TypeScript", "Stripe"],
+    technologies: ["Next.js", "TypeScript", "Stripe", "Postgres"],
   },
   {
     name: "lockr",
@@ -29,7 +29,7 @@ const projects: ProjectType[] = [
       "Third Party Integration",
       "Account Management",
     ],
-    technologies: ["Next.js", "TypeScript", "Next-Auth"],
+    technologies: ["Next.js", "TypeScript", "Next-Auth", "Postgres"],
   },
   {
     name: "blog",
@@ -41,7 +41,7 @@ const projects: ProjectType[] = [
     website: "https://www.blog.clewup.co.uk",
     background: "bg-[#0096FF]",
     features: ["CMS", "Social Networking", "Filters"],
-    technologies: ["Next.js", "TypeScript"],
+    technologies: ["Next.js", "TypeScript", "Postgres"],
   },
 ];
 

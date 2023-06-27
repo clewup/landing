@@ -1,6 +1,7 @@
 "use client";
 
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
+import Area from "@/components/Area/Area";
 import projects from "@/constants/projects";
 import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import { motion as m } from "framer-motion";
@@ -37,7 +38,7 @@ export default function ProjectSlug({
   return (
     <PageWrapper className="relative flex">
       <Link href="/#works" className="absolute top-10 right-10">
-        <ArrowLeftCircle size={40} />
+        <ArrowLeftCircle size={50} />
       </Link>
 
       <div className={cx("w-1/2 flex items-end", project.background)}>
@@ -55,27 +56,8 @@ export default function ProjectSlug({
           </h1>
           <p className="text-2xl">{project.description}</p>
 
-          <span>
-            <h1 className="font-bold text-4xl">FEATURES</h1>
-            <ul>
-              {project.features.map((technology, index) => (
-                <li key={index} className="text-xl">
-                  {technology}
-                </li>
-              ))}
-            </ul>
-          </span>
-
-          <span>
-            <h1 className="font-bold text-4xl">TECHNOLOGIES</h1>
-            <ul>
-              {project.technologies.map((technology, index) => (
-                <li key={index} className="text-xl">
-                  {technology}
-                </li>
-              ))}
-            </ul>
-          </span>
+          <Area area="FEATURES" items={project.features} />
+          <Area area="TECHNOLOGIES" items={project.technologies} />
         </div>
 
         <Link href={project.website} target="_blank">

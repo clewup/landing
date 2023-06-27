@@ -1,7 +1,7 @@
 "use client";
 
 import ContactForm from "@/components/ContactForm/ContactForm";
-import SummaryArea from "@/components/SummaryArea/SummaryArea";
+import Area from "@/components/Area/Area";
 import metadata from "@/constants/metadata";
 import useSectionStore from "@/lib/zustand/hooks/useSectionStore/useSectionStore";
 import {
@@ -45,13 +45,13 @@ const Contact = () => {
           </span>
         </div>
         <div className="flex flex-col gap-10 md:w-2/3 p-5">
-          <SummaryArea
+          <Area
             area="SERVICES"
-            skills={["UI/UX design", "API development", "Cloud computing"]}
+            items={["UI/UX design", "API development", "Cloud computing"]}
           />
-          <SummaryArea
+          <Area
             area="FRAMEWORKS/LIBRARIES"
-            skills={[
+            items={[
               "React.js",
               "Next.js",
               ".NET",
@@ -61,11 +61,8 @@ const Contact = () => {
               "Framer",
             ]}
           />
-          <SummaryArea area="LANGUAGES" skills={["TypeScript", "C#", "Sass"]} />
-          <SummaryArea
-            area="DATABASES"
-            skills={["MsSQL", "Postgres", "MongoDB"]}
-          />
+          <Area area="LANGUAGES" items={["TypeScript", "C#", "Sass"]} />
+          <Area area="DATABASES" items={["MsSQL", "Postgres", "MongoDB"]} />
         </div>
       </div>
     </section>
