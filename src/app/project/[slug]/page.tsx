@@ -7,7 +7,7 @@ import { useCursor } from "@/contexts/CursorContext/CursorContext";
 import { motion as m } from "framer-motion";
 import Link from "next/link";
 import { useEffect } from "react";
-import { ArrowLeftCircle } from "react-feather";
+import { ArrowLeftCircle, Eye } from "react-feather";
 import cx from "classnames";
 
 export default function ProjectSlug({
@@ -54,16 +54,17 @@ export default function ProjectSlug({
           <h1 className="-translate-x-20 text-9xl font-bold font-drukWide uppercase">
             {project.name}
           </h1>
-          <p className="text-2xl">{project.description}</p>
+          <p className="text-2xl py-10">{project.description}</p>
 
           <Area area="FEATURES" items={project.features} />
           <Area area="TECHNOLOGIES" items={project.technologies} />
         </div>
 
         <Link href={project.website} target="_blank">
-          <h1 className="text-7xl font-bold font-drukCond underline">
+          <button className="text-4xl font-bold bg-primary py-3 rounded-full w-full flex items-center justify-center gap-4">
             VIEW DEMO
-          </h1>
+            <Eye size={30} />
+          </button>
         </Link>
       </div>
     </PageWrapper>
