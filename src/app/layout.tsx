@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="bg-base text-white">
-      <body>
+      <body className="no-scrollbar">
         <Providers>
             <Header />
             <Cursor />
