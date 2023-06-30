@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <m.div
       className={cx(
-        "fixed h-[15vh] w-screen justify-end p-5 z-40",
+        "fixed h-[15vh] w-full justify-end p-5 z-40",
         isRendered ? "flex" : "hidden"
       )}
     >

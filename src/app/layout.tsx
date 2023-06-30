@@ -15,12 +15,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className="bg-base text-white">
       <body>
         <Providers>
-          <div className="w-screen">
             <Header />
             <Cursor />
             {children}
             <Footer />
-          </div>
         </Providers>
       </body>
     </html>

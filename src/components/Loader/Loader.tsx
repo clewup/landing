@@ -77,7 +77,7 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
 
   return (
     <m.div
-      className="fixed h-screen w-screen"
+      className="fixed h-screen w-full"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -88,7 +88,7 @@ const Loader: FC<LoaderProps> = ({ setLoading }) => {
         variants={backgroundVariants}
         initial="initial"
         animate="animate"
-        className="absolute bg-white h-screen w-screen"
+        className="absolute bg-white h-screen w-full"
       />
       <div className="absolute right-10 top-10 overflow-hidden  ">
         <m.p

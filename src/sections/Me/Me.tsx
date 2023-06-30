@@ -34,7 +34,7 @@ const Me = () => {
       animate="visible"
       ref={sectionRef}
     >
-      <div className="flex items-center min-h-screen w-screen overflow-x-hidden">
+      <div className="flex items-center min-h-screen w-full overflow-x-hidden">
         <div className="px-5">
           <StaggeredLetters
             className="text-7xl md:text-11xl md:leading-[16rem] font-drukCond"
